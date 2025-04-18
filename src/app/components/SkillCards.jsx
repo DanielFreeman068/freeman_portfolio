@@ -8,13 +8,24 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const cards = [
     {
         id: 1,
-        icon: '/react.png',
+        icon: '/icons/react.png',
         title: 'React',
         percentage: 85,
         links: [
-            { label: 'React Transposition Cipher', url: 'https://github.com/Daniel-Freeman/react_transposition.git' },
-            { label: 'React Components', url: 'https://github.com/Daniel-Freeman/react_components.git' },
-            { label: 'Cash Compass', url: 'https://github.com/Daniel-Freeman/cash_compass.git' },
+            { label: 'React Transposition Cipher', url: 'https://github.com/DanielFreeman068/react_transposition.git' },
+            { label: 'React Components', url: 'https://github.com/DanielFreeman068/react_components.git' },
+            { label: 'Cash Compass', url: 'https://github.com/DanielFreeman068/fbla_cash_compass.git' },
+        ]
+    },
+    {
+        id: 2,
+        icon: '/icons/html.png',
+        title: 'HTML5',
+        percentage: 100,
+        links: [
+            { label: 'First Portfolio', url: 'https://github.com/DanielFreeman068/Portfolio.git' },
+            { label: 'Summer Site', url: 'https://github.com/DanielFreeman068/summberSite.git' },
+            { label: 'Jquery Maze Game', url: 'https://github.com/DanielFreeman068/jquery_maze_game.git' },
         ]
     },
     ];
