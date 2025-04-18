@@ -1,8 +1,9 @@
 import Navigation from "@/app/components/Navigation";
+import SkillCards from "@/app/components/SkillCards"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-primary text-white">
+    <main className="min-h-screen text-white">
     <Navigation />
     
     {/* Content with padding to account for fixed nav */}
@@ -13,6 +14,7 @@ export default function Home() {
         <p className="text-xl max-w-3xl">
           Your about me content here...
         </p>
+        <SkillCards />
       </section>
       
       {/* Experience Section */}
