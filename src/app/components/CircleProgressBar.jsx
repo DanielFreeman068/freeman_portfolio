@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-const CircleProgressBar = ({ percentage = 75 }) => {
+const CircleProgressBar = ({ percentage }) => {
     const strokeDasharray = 283;
     const [animatedPercent, setAnimatedPercent] = useState(0);
 
@@ -9,14 +9,14 @@ const CircleProgressBar = ({ percentage = 75 }) => {
         let start = null;
 
         const animate = (timestamp) => {
-        if (!start) start = timestamp;
-        const progress = timestamp - start;
-        const current = Math.min((progress / 1000) * percentage, percentage);
-        setAnimatedPercent(Math.floor(current));
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            const current = Math.min((progress / 1000) * percentage, percentage);
+            setAnimatedPercent(Math.floor(current));
 
-        if (current < percentage) {
-            requestAnimationFrame(animate);
-        }
+            if (current < percentage) {
+                requestAnimationFrame(animate);
+            }
         };
 
         requestAnimationFrame(animate);
@@ -46,13 +46,12 @@ const CircleProgressBar = ({ percentage = 75 }) => {
                     strokeDasharray={strokeDasharray}
                     strokeDashoffset={strokeDashoffset}
                     strokeLinecap="round"
-                    style={{ transition: "stroke-dashoffset 0.3s ease-out" }}
                 />
             </svg>
             <div className="absolute flex flex-col items-center">
                 <span className="text-md text-textPrimary">Proficiency</span>
                 <span className="text-xl font-bold text-textPrimary">
-                {animatedPercent}%
+                    {animatedPercent}%
                 </span>
             </div>
         </div>
