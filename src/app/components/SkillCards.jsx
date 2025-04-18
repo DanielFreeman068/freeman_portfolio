@@ -10,7 +10,7 @@ const cards = [
         id: 1,
         icon: '/react.png',
         title: 'React',
-        percentage: 80,
+        percentage: 85,
         links: [
             { label: 'React Transposition Cipher', url: 'https://github.com/Daniel-Freeman/react_transposition.git' },
             { label: 'React Components', url: 'https://github.com/Daniel-Freeman/react_components.git' },
