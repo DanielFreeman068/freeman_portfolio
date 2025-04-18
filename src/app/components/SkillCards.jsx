@@ -12,8 +12,9 @@ const cards = [
         title: 'React',
         percentage: 80,
         links: [
-            { label: 'Portfolio Site', url: 'https://yourportfolio.com' },
-            { label: 'To-Do App', url: 'https://yourtodoapp.com' }
+            { label: 'React Transposition Cipher', url: 'https://github.com/Daniel-Freeman/react_transposition.git' },
+            { label: 'React Components', url: 'https://github.com/Daniel-Freeman/react_components.git' },
+            { label: 'Cash Compass', url: 'https://github.com/Daniel-Freeman/cash_compass.git' },
         ]
     },
     ];
