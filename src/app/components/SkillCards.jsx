@@ -28,7 +28,49 @@ const cards = [
             { label: 'Jquery Maze Game', url: 'https://github.com/DanielFreeman068/jquery_maze_game.git' },
         ]
     },
-    ];
+    {
+        id: 3,
+        icon: '/icons/css.png',
+        title: 'CSS',
+        percentage: 95,
+        links: [
+            { label: 'Pet Adoption Platform', url: 'https://github.com/DanielFreeman068/Pet-Adoption-Platform.git' },
+            { label: 'Event Registration Platform', url: 'https://github.com/DanielFreeman068/EJS--Event-Registration.git' },
+            { label: 'Jolt Mobile App', url: 'https://github.com/DanielFreeman068/fbla-mad-cordova-nationals.git' },
+        ]
+    },
+    {
+        id: 4,
+        icon: '/icons/js.png',
+        title: 'JavaScript',
+        percentage: 90,
+        links: [
+            { label: 'JQuery Maze Game', url: 'https://github.com/DanielFreeman068/jquery-maze.git' },
+            { label: 'Tic Tac Toe', url: 'https://github.com/DanielFreeman068/TicTacToe.git' },
+            { label: 'Jolt Mobile App', url: 'https://github.com/DanielFreeman068/fbla-mad-cordova-nationals.git' },
+        ]
+    },
+    {
+        id: 5,
+        icon: '/icons/python.png',
+        title: 'Python',
+        percentage: 80,
+        links: [
+            { label: 'File Manipulation', url: 'https://github.com/DanielFreeman068/File-Manipulator.git' },
+        ]
+    },
+    {
+        id: 6,
+        icon: '/icons/typescript.png',
+        title: 'Typescript',
+        percentage: 35,
+        links: [
+            { label: 'JQuery Maze Game', url: 'https://github.com/DanielFreeman068/jquery-maze.git' },
+            { label: 'Tic Tac Toe', url: 'https://github.com/DanielFreeman068/TicTacToe.git' },
+            { label: 'Jolt Mobile App', url: 'https://github.com/DanielFreeman068/fbla-mad-cordova-nationals.git' },
+        ]
+    },
+];
 
     export default function CardCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0);

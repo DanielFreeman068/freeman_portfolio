@@ -11,9 +11,6 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="min-h-screen px-8 py-16 flex flex-col justify-center">
         <h2 className="text-3xl font-bold mb-6">About Me</h2>
-        <p className="text-xl max-w-3xl">
-          Your about me content here...
-        </p>
         <SkillCards />
       </section>
       
