@@ -31,7 +31,7 @@ const cards = [
                 </div>
 
                 {/* Card Content */}
-                <div className={`w-full h-full flex items-center justify-center text-xl font-semibold transition-all duration-300 overflow-hidden rounded-xl bg-soft bg-opacity-80 border-2 border-color-textMuted shadow-sm shadow-textMuted transition-shadow duration-300 hover:shadow-md hover:shadow-textMuted`}>
+                <div className={`w-full h-full flex items-center justify-center text-xl font-semibold transition-all duration-300 overflow-hidden rounded-xl bg-soft bg-opacity-80 border-2 border-color-textMuted shadow-sm shadow-textMuted transition-shadow duration-100 hover:shadow-md hover:shadow-textMuted`}>
                     {cards[currentIndex].content}
                 </div>
             </div>
