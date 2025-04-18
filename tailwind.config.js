@@ -32,9 +32,6 @@ module.exports = {
           success: '#10B981',
           warning: '#F59E0B',
           danger: '#EF4444',
-
-          //GOLD
-          gold: '#EDC736',
         },
       },
   },
