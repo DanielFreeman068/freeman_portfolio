@@ -2,19 +2,46 @@ import Navigation from "@/app/components/Navigation";
 
 export default function Home() {
   return (
-    <div>
-      <Navigation />
-      <div className="p-4 mt-10">
-      <section id="About-Me" className="h-screen bg-blue-900 flex justify-center items-center text-white">
-        <h1>About Me</h1>
+    <main className="min-h-screen bg-primary text-white">
+    <Navigation />
+    
+    {/* Content with padding to account for fixed nav */}
+    <div className="pt-32">
+      {/* About Section */}
+      <section id="about" className="min-h-screen px-8 py-16 flex flex-col justify-center">
+        <h2 className="text-3xl font-bold mb-6">About Me</h2>
+        <p className="text-xl max-w-3xl">
+          Your about me content here...
+        </p>
       </section>
-      <section id="Experience" className="h-screen bg-blue-700 flex justify-center items-center text-white">
-        <h1>Experience</h1>
+      
+      {/* Experience Section */}
+      <section id="experience" className="min-h-screen px-8 py-16 flex flex-col justify-center">
+        <h2 className="text-3xl font-bold mb-6">Experience</h2>
+        <div className="max-w-3xl">
+          {/* Your experience content */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-semibold">Job Title</h3>
+            <p className="text-lg text-indigo-300">Company Name • 2020-Present</p>
+            <p className="mt-2">Job description here...</p>
+          </div>
+          {/* Add more experience items as needed */}
+        </div>
       </section>
-      <section id="Projects" className="h-screen bg-blue-500 flex justify-center items-center text-white">
-        <h1>Projects</h1>
+      
+      {/* Projects Section */}
+      <section id="projects" className="min-h-screen px-8 py-16 flex flex-col justify-center">
+        <h2 className="text-3xl font-bold mb-6">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+          {/* Project cards would go here */}
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold">Project Name</h3>
+            <p className="mt-2">Project description...</p>
+          </div>
+          {/* Add more project cards as needed */}
+        </div>
       </section>
-      </div>
     </div>
+  </main>
   );
 }
