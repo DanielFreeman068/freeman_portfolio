@@ -125,7 +125,7 @@ const cards = [
     };
 
     return (
-        <div className="flex flex-col items-center">
+        <div data-aos="fade-up" className="flex flex-col items-center">
             <div className="relative w-[300px] h-[465px] shadow-lg rounded-xl">
                 {/* Arrows */}
                 <div className="absolute top-1/2 -left-5 -translate-y-1/2 z-10">

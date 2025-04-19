@@ -1,15 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import AOSInitializer from "@/app/components/AOSInitializer";
+import { Inria_Sans } from 'next/font/google'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inriaSans = Inria_Sans({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-inria',
+})
 
 export const metadata = {
   title: "Portfolio | Daniel Freeman",
@@ -19,9 +16,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={inriaSans.className}>
+        <AOSInitializer />
         {children}
       </body>
     </html>
