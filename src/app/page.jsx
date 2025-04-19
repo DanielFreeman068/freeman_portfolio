@@ -8,7 +8,7 @@ export default function Home() {
       <Navigation />
       
       {/* Content with padding to account for fixed nav */}
-      <div className="pt-32 px-2 md:px-16 lg:px-32">
+      <div className="pt-32 px-2">
         {/* About Section */}
         <section id="about" className="min-h-screen px-8 py-16 flex flex-col text-center max-w-[1000px] mx-auto">
           <h2 className="mb-24 text-3xl w-fit mx-auto font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-all after:duration-300 hover:after:w-0">
