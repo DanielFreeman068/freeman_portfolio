@@ -32,6 +32,9 @@ module.exports = {
 			success: '#10B981',
 			warning: '#F59E0B',
 			danger: '#EF4444',
+
+			// Link
+			links: '#5BC6FF'
 			},
 		},
 	},
