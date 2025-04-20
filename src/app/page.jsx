@@ -91,7 +91,7 @@ const jobData = [
       {/* Content with padding to account for fixed nav */}
       <div className="pt-32 px-2">
         {/* About Section */}
-        <section id="about" className="min-h-screen px-8 py-16 flex flex-col text-center max-w-[1000px] mx-auto">
+        <section id="about" className="min-h-screen px-8 py-16 flex flex-col text-center max-w-[14 00px] mx-auto">
           <h2 className="mb-16 text-3xl w-fit mx-auto font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-all after:duration-300 hover:after:w-0">
             About Me
           </h2>
@@ -128,6 +128,27 @@ const jobData = [
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* contact me and skill cards */}
+            <div className="flex flex-col gap-16">
+
+              {/* contact me container */}
+              <div data-aos="fade-down" className="flex flex-col space-y-4 bg-soft bg-opacity-80 rounded-xl p-4 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
+                <h1 className="text-2xl font-semibold">Contact Me!</h1>
+                <div className="flex flex-col gap-3 p-4 mx-auto">
+                  {contacts.map(({ id, label, shortLink, link }) => (
+                    <div key={id} className="flex items-center gap-2">
+                      <span className="font-medium text-md">{label}</span>
+                      <span>|</span>
+                      <a href={link} target="_blank" rel="noopener noreferrer" className="text-links hover:underline break-all text-sm lg:text-xs">{shortLink}</a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* skills and tools card */}
+              <SkillCards />
             </div>
 
             {/* contact me and skill cards */}
