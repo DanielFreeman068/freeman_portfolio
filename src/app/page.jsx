@@ -19,6 +19,49 @@ const languages = [
   },
 ]
 
+const certifications = [
+  {
+    id: 1,
+    label: 'IT Specialist - HTML5 Application Development',
+    date: 'May 20, 2024',
+    icon: '#',
+  },
+  {
+    id: 2,
+    label: 'PCEP - Certified Entry-Level Python Programmer',
+    date: 'April 10, 2025',
+    icon: '#',
+  },
+]
+
+// somebody help me replace thissssss with somethingg  professional
+const hobbies = [
+  {
+    id: 1,
+    label: 'Coding and Programming',
+  },
+  {
+    id: 2,
+    label: 'Mountain Biking',
+  },
+  {
+    id: 3,
+    label: 'Rock Climbing',
+  },
+  {
+    id: 4,
+    label: 'Sports',
+  },
+  {
+    id: 5,
+    label: 'Hiking and Backpacking',
+  },
+  {
+    id: 6,
+    label: 'Gaming',
+  },
+]
+
 const contacts = [
   {
     id: 1,
@@ -92,86 +135,97 @@ const jobData = [
       <div className="pt-32 px-2">
         {/* About Section */}
         <section id="about" className="min-h-screen px-8 py-16 flex flex-col text-center max-w-[14 00px] mx-auto">
-          <h2 className="mb-16 text-3xl w-fit mx-auto font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-all after:duration-300 hover:after:w-0">
+          <h2 className="mb-[100px] text-3xl w-fit mx-auto font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-all after:duration-300 hover:after:w-0">
             About Me
           </h2>
 
-          <div className="flex gap-16 flex-col lg:flex-row">
+          <div className="flex flex-col xl:flex-row gap-16 mx-auto">
+            <div className="flex gap-16 flex-col lg:flex-row mx-auto">
 
-            {/* about me info */}
-            <div data-aos="fade-right" className="flex flex-col space-y-8  bg-soft bg-opacity-80 rounded-xl p-8 lg:p-16 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
-              
-              {/* profile picture and name */}
-              <div className="flex gap-6 items-center mx-auto">
-                <Image src='/profile.jpg' alt="Profile Picture"  width={75} height={75} className="rounded-full" />
-                <h1 className="text-xl md:text-3xl font-medium">Daniel Freeman</h1>
-              </div>
+              {/* about me info */}
+              <div data-aos="fade-right" className="flex flex-col space-y-8  bg-soft bg-opacity-80 rounded-xl p-8 lg:p-16 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
+                
+                {/* profile picture and name */}
+                <div className="flex gap-6 items-center mx-auto">
+                  <Image src='/profile.jpg' alt="Profile Picture"  width={75} height={75} className="rounded-full" />
+                  <h1 className="text-xl md:text-3xl font-medium">Daniel Freeman</h1>
+                </div>
 
-              {/* description */}
-              <p className="text-md md:text-xl mx-auto max-w-[500px]">I'm a full stack web developer with a focus on building responsive, user-friendly applications. I work with JavaScript, Python, HTML, and CSS, and I'm experienced in frameworks like React.js, Next.js, and Tailwind CSS. On the backend, I use MongoDB and have a solid understanding of database management. I'm always exploring new technologies and love bringing ideas to life through code.</p>
+                {/* description */}
+                <p className="text-md md:text-xl mx-auto max-w-[500px]">I'm a full stack web developer with a focus on building responsive, user-friendly applications. I work with JavaScript, Python, HTML, and CSS, and I'm experienced in frameworks like React.js, Next.js, and Tailwind CSS. On the backend, I use MongoDB and have a solid understanding of database management. I'm always exploring new technologies and love bringing ideas to life through code.</p>
 
-              {/* languages */}
-              <div className="w-full max-w-md mx-auto p-4">
-                <h2 className="text-center text-xl md:text-2xl font-semibold mb-6">Language Proficiency</h2>
-                {languages.map((language) => (
-                  <div key={language.id} className="mb-6">
-                    <div className="flex items-center gap-3 mb-1">
-                      <Image src={language.icon} alt={language.label} width={45} height={45} />
-                      <div className="flex justify-between items-center w-full">
-                        <span className="font-semibold text-lg">{language.label}</span>
-                        <span className="text-md">{language.percentage}%</span>
+                {/* languages */}
+                <div className="w-full max-w-md mx-auto p-4">
+                  <h2 className="text-center text-xl md:text-2xl font-semibold mb-6">Language Proficiency</h2>
+                  {languages.map((language) => (
+                    <div key={language.id} className="mb-6">
+                      <div className="flex items-center gap-3 mb-1">
+                        <Image src={language.icon} alt={language.label} width={45} height={45} />
+                        <div className="flex justify-between items-center w-full">
+                          <span className="font-semibold text-lg">{language.label}</span>
+                          <span className="text-md">{language.percentage}%</span>
+                        </div>
+                      </div>
+                      <div className="w-full bg-accentLight rounded-full h-3">
+                        <div className="bg-accent h-3 rounded-full" style={{ width: `${language.percentage}%` }}></div>
                       </div>
                     </div>
-                    <div className="w-full bg-accentLight rounded-full h-3">
-                      <div className="bg-accent h-3 rounded-full" style={{ width: `${language.percentage}%` }}></div>
-                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* contact me and skill cards */}
+              <div className="flex flex-col gap-16">
+
+                {/* contact me container */}
+                <div data-aos="fade-down" className="flex flex-col space-y-4 bg-soft bg-opacity-80 rounded-xl p-4 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
+                  <h1 className="text-2xl font-semibold">Contact Me!</h1>
+                  <div className="flex flex-col gap-3 p-4 mx-auto">
+                    {contacts.map(({ id, label, shortLink, link }) => (
+                      <div key={id} className="flex items-center gap-2">
+                        <span className="font-medium text-md">{label}</span>
+                        <span>|</span>
+                        <a href={link} target="_blank" rel="noopener noreferrer" className="text-links hover:underline break-all text-sm lg:text-xs">{shortLink}</a>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                {/* skills and tools card */}
+                <SkillCards />
               </div>
             </div>
+              {/* certifications and hobbies container */}
+              <div className="flex flex-col lg:flex-row xl:flex-col gap-16">
 
-            {/* contact me and skill cards */}
-            <div className="flex flex-col gap-16">
-
-              {/* contact me container */}
-              <div data-aos="fade-down" className="flex flex-col space-y-4 bg-soft bg-opacity-80 rounded-xl p-4 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
-                <h1 className="text-2xl font-semibold">Contact Me!</h1>
-                <div className="flex flex-col gap-3 p-4 mx-auto">
-                  {contacts.map(({ id, label, shortLink, link }) => (
-                    <div key={id} className="flex items-center gap-2">
-                      <span className="font-medium text-md">{label}</span>
-                      <span>|</span>
-                      <a href={link} target="_blank" rel="noopener noreferrer" className="text-links hover:underline break-all text-sm lg:text-xs">{shortLink}</a>
-                    </div>
-                  ))}
+                {/* certifications container */}
+                <div data-aos="fade-down" className="flex flex-col space-y-4 bg-soft bg-opacity-80 rounded-xl p-4 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
+                  <h1 className="text-2xl font-semibold">Contact Me!</h1>
+                  <div className="flex flex-col gap-3 p-4 mx-auto">
+                    {certifications.map(({ id, label, date, icon }) => (
+                      <div key={id} className="flex items-center gap-2">
+                        <span className="font-medium text-md">{label}</span>
+                        <span>|</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                {/* hobbies container */}
+                <div data-aos="fade-down" className="flex flex-col space-y-4 bg-soft bg-opacity-80 rounded-xl p-4 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
+                  <h1 className="text-2xl font-semibold">Contact Me!</h1>
+                  <div className="flex flex-col gap-3 p-4 mx-auto">
+                    {contacts.map(({ id, label, shortLink, link }) => (
+                      <div key={id} className="flex items-center gap-2">
+                        <span className="font-medium text-md">{label}</span>
+                        <span>|</span>
+                        <a href={link} target="_blank" rel="noopener noreferrer" className="text-links hover:underline break-all text-sm lg:text-xs">{shortLink}</a>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-
-              {/* skills and tools card */}
-              <SkillCards />
-            </div>
-
-            {/* contact me and skill cards */}
-            <div className="flex flex-col gap-16">
-
-              {/* contact me container */}
-              <div data-aos="fade-down" className="flex flex-col space-y-4 bg-soft bg-opacity-80 rounded-xl p-4 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
-                <h1 className="text-2xl font-semibold">Contact Me!</h1>
-                <div className="flex flex-col gap-3 p-4 mx-auto">
-                  {contacts.map(({ id, label, shortLink, link }) => (
-                    <div key={id} className="flex items-center gap-2">
-                      <span className="font-medium text-md">{label}</span>
-                      <span>|</span>
-                      <a href={link} target="_blank" rel="noopener noreferrer" className="text-links hover:underline break-all text-sm lg:text-xs">{shortLink}</a>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* skills and tools card */}
-              <SkillCards />
-            </div>
           </div>
+
         </section>
         
         {/* Experience Section */}
