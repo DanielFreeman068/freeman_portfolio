@@ -24,41 +24,13 @@ const certifications = [
     id: 1,
     label: 'IT Specialist - HTML5 Application Development',
     date: 'May 20, 2024',
-    icon: '#',
+    icon: '/certification_icons/HTML5.png',
   },
   {
     id: 2,
     label: 'PCEP - Certified Entry-Level Python Programmer',
     date: 'April 10, 2025',
-    icon: '#',
-  },
-]
-
-// somebody help me replace thissssss with somethingg  professional
-const hobbies = [
-  {
-    id: 1,
-    label: 'Coding and Programming',
-  },
-  {
-    id: 2,
-    label: 'Mountain Biking',
-  },
-  {
-    id: 3,
-    label: 'Rock Climbing',
-  },
-  {
-    id: 4,
-    label: 'Sports',
-  },
-  {
-    id: 5,
-    label: 'Hiking and Backpacking',
-  },
-  {
-    id: 6,
-    label: 'Gaming',
+    icon: '/certification_icons/pcep.png',
   },
 ]
 
@@ -66,26 +38,20 @@ const contacts = [
   {
     id: 1,
     label: 'Github',
-    shortLink: 'myGithub/DanielFreeman',
+    icon: '/social_icons/github.png',
     link: 'https://github.com/DanielFreeman068',
   },
   {
     id: 2,
     label: 'LinkedIn',
-    shortLink: 'myLinkedIn/DanielFreeman',
+    icon: '/social_icons/linkedin.png',
     link: 'https://www.linkedin.com/in/daniel-freeman-438602351/',
   },
   {
     id: 3,
     label: 'Credly',
-    shortLink: 'certifications/DanielFreeman',
+    icon: '/social_icons/credly.png',
     link: 'https://www.credly.com/users/daniel-freeman.83f3b17b/edit',
-  },
-  {
-    id: 4,
-    label: 'Email',
-    shortLink: 'danielfree756@gmail.com',
-    link: 'danielfree756@gmail.com',
   },
 ]
 
@@ -131,25 +97,21 @@ const jobData = [
     <main className="min-h-screen text-textPrimary">
       <Navigation />
       
-      {/* Content with padding to account for fixed nav */}
       <div className="pt-32 px-2">
         {/* About Section */}
-        <section id="about" className="min-h-screen px-8 py-16 flex flex-col text-center max-w-[14 00px] mx-auto">
-          <h2 className="mb-[100px] text-3xl w-fit mx-auto font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-all after:duration-300 hover:after:w-0">
+        <section id="about" className="min-h-screen px-8 py-14 flex flex-col text-center max-w-[1400px] mx-auto">
+          <h2 className="mb-[50px] text-3xl w-fit mx-auto font-bold relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-all after:duration-300 hover:after:w-0">
             About Me
           </h2>
 
-          <div className="flex flex-col xl:flex-row gap-16 mx-auto">
-            <div className="flex gap-16 flex-col lg:flex-row mx-auto">
+          <div className="flex flex-col xl:flex-row gap-10 mx-auto">
+            <div className="flex gap-10 flex-col lg:flex-row mx-auto">
 
               {/* about me info */}
               <div data-aos="fade-right" className="flex flex-col space-y-8  bg-soft bg-opacity-80 rounded-xl p-8 lg:p-16 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
                 
-                {/* profile picture and name */}
-                <div className="flex gap-6 items-center mx-auto">
-                  <Image src='/profile.jpg' alt="Profile Picture"  width={75} height={75} className="rounded-full" />
+                {/* name */}
                   <h1 className="text-xl md:text-3xl font-medium">Daniel Freeman</h1>
-                </div>
 
                 {/* description */}
                 <p className="text-md md:text-xl mx-auto max-w-[500px]">I'm a full stack web developer with a focus on building responsive, user-friendly applications. I work with JavaScript, Python, HTML, and CSS, and I'm experienced in frameworks like React.js, Next.js, and Tailwind CSS. On the backend, I use MongoDB and have a solid understanding of database management. I'm always exploring new technologies and love bringing ideas to life through code.</p>
@@ -174,51 +136,65 @@ const jobData = [
                 </div>
               </div>
 
-              {/* contact me and skill cards */}
-              <div className="flex flex-col gap-16">
+              {/* profile picture and skill cards */}
+              <div className="flex flex-col gap-10">
 
-                {/* contact me container */}
-                <div data-aos="fade-down" className="flex flex-col space-y-4 bg-soft bg-opacity-80 rounded-xl p-4 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
-                  <h1 className="text-2xl font-semibold">Contact Me!</h1>
-                  <div className="flex flex-col gap-3 p-4 mx-auto">
-                    {contacts.map(({ id, label, shortLink, link }) => (
-                      <div key={id} className="flex items-center gap-2">
-                        <span className="font-medium text-md">{label}</span>
-                        <span>|</span>
-                        <a href={link} target="_blank" rel="noopener noreferrer" className="text-links hover:underline break-all text-sm lg:text-xs">{shortLink}</a>
-                      </div>
-                    ))}
-                  </div>
+                {/* profile picture */}
+                <div data-aos="fade-down" className="rounded-xl border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md bg-[url('/profile_two.jpg')] bg-cover bg-no-repeat bg-center h-[200px]">
                 </div>
 
                 {/* skills and tools card */}
                 <SkillCards />
               </div>
             </div>
-              {/* certifications and hobbies container */}
+
+              {/* contact form and links */}
               <div className="flex flex-col lg:flex-row xl:flex-col gap-16">
 
-                {/* certifications container */}
-                <div data-aos="fade-down" className="flex flex-col space-y-4 bg-soft bg-opacity-80 rounded-xl p-4 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
+                {/* contact me container and form */}
+                <div data-aos="fade-left" className="flex flex-col space-y-4 bg-soft bg-opacity-80 rounded-xl p-4 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
                   <h1 className="text-2xl font-semibold">Contact Me!</h1>
-                  <div className="flex flex-col gap-3 p-4 mx-auto">
-                    {certifications.map(({ id, label, date, icon }) => (
-                      <div key={id} className="flex items-center gap-2">
-                        <span className="font-medium text-md">{label}</span>
-                        <span>|</span>
+
+                  {/* contact form */}
+                  <div className="flex flex-col space-y-4 p-4">
+                    <div className="flex gap-4 mx-auto items-center">
+                      <Image src="/social_icons/mail.png" alt="Email" width={50} height={50} />
+                      <div className="flex flex-col gap-2 text-left">
+                        <h1 className="text-xl">Email: </h1>
+                        <h1 className="text-lg text-links">danielfree756@gmail.com</h1>
                       </div>
-                    ))}
+                    </div>
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-md mx-auto w-full">
+                      <input
+                        type="email"
+                        name="email"
+                        value={form.email}
+                        onChange={handleChange}
+                        placeholder="Your email"
+                        required
+                        className="border p-2 rounded"
+                      />
+                      <textarea
+                        name="message"
+                        value={form.message}
+                        onChange={handleChange}
+                        placeholder="Your message"
+                        required
+                        className="border p-2 rounded min-h-[100px]"
+                      />
+                      <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded">
+                        Send Message
+                      </button>
+                      <p className="text-sm text-gray-600">{status}</p>
+                    </form>
                   </div>
-                </div>
-                {/* hobbies container */}
-                <div data-aos="fade-down" className="flex flex-col space-y-4 bg-soft bg-opacity-80 rounded-xl p-4 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
-                  <h1 className="text-2xl font-semibold">Contact Me!</h1>
-                  <div className="flex flex-col gap-3 p-4 mx-auto">
-                    {contacts.map(({ id, label, shortLink, link }) => (
-                      <div key={id} className="flex items-center gap-2">
-                        <span className="font-medium text-md">{label}</span>
-                        <span>|</span>
-                        <a href={link} target="_blank" rel="noopener noreferrer" className="text-links hover:underline break-all text-sm lg:text-xs">{shortLink}</a>
+
+                  {/* icon links */}
+                  <div className="flex flex-row gap-4 p-4 mx-auto">
+                    {contacts.map(({ id, label, icon, link }) => (
+                      <div key={id} className="flex flex-col items-center gap-2">
+                        <a href={link} target="_blank" rel="noopener noreferrer" className="text-links hover:underline break-all text-sm lg:text-xs"><Image src={icon} alt={label} width={45} height={45} /></a>
+                        <h1>{label}</h1>
                       </div>
                     ))}
                   </div>
@@ -230,7 +206,7 @@ const jobData = [
         
         {/* Experience Section */}
         <section id="experience" className="min-h-screen px-8 py-16 flex flex-col text-center mx-auto">
-          <h2 className="mb-16 text-3xl w-fit mx-auto font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-all after:duration-300 hover:after:w-0">
+          <h2 className="mb-16 text-3xl w-fit mx-auto font-bold relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-all after:duration-300 hover:after:w-0">
             Experience
           </h2>
 
