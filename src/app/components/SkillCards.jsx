@@ -126,7 +126,7 @@ const cards = [
 
     return (
         <div data-aos="fade-up" className="flex flex-col items-center">
-            <div className="relative w-[300px] h-[465px] shadow-lg rounded-xl">
+            <div className="relative w-full lg:w-[300px] h-[465px] sm:h-[300px] lg:min-h-[465px] shadow-lg rounded-xl">
                 {/* Arrows */}
                 <div className="absolute top-1/2 -left-5 -translate-y-1/2 z-10">
                     <ChevronLeft onClick={prevCard} className='text-primary bg-white rounded-full shadow-md h-[35px] w-[35px] duration-100 transition-shadow hover:shadow-textMuted hover:shadow-md hover:cursor-pointer' />
@@ -136,17 +136,49 @@ const cards = [
                 </div>
 
                 {/* Card Content */}
-                <div className={`w-full h-full flex flex-col text-xl space-y-4 text-center font-semibold overflow-hidden rounded-xl bg-soft bg-opacity-80 border-2 border-color-textMuted transition-shadow duration-100 hover:shadow-md hover:shadow-textMuted`}>
-                    <div className="flex gap-4 mx-auto items-center mt-8">
-                        <Image src={cards[currentIndex].icon} alt="icon" width={45} height={45} />
-                        <h1 className='text-2xl text-textPrimary'>{cards[currentIndex].title}</h1>
+                <div className="w-full h-full flex flex-col sm:flex-row lg:flex-col items-center justify-center text-xl overflow-hidden rounded-xl bg-soft bg-opacity-80 border-2 border-color-textMuted transition-shadow duration-100 hover:shadow-md hover:shadow-textMuted">
+
+                    {/* lg+ content */}
+                    <div className="flex sm:hidden lg:flex flex-col space-y-4 text-center font-semibold w-full">
+                        <div className="flex gap-4 mx-auto items-center mt-4">
+                            <Image src={cards[currentIndex].icon} alt="icon" width={45} height={45} />
+                            <h1 className="text-2xl text-textPrimary">{cards[currentIndex].title}</h1>
+                        </div>
                     </div>
-                    <CircleProgressBar percentage={cards[currentIndex].percentage}/>
-                    <div className="flex flex-col space-y-2 items-center px-4">
-                        <h1 className="text-xl text-textPrimary mb-1">Project Usages</h1>
-                        {cards[currentIndex].links.map((link, idx) => (
-                            <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="text-sm text-links hover:underline">{link.label}</a>
-                        ))}
+
+                    {/* WIDE CONTENT */}
+                    <div className="hidden sm:flex lg:hidden flex-col space-y-4 text-center font-semibold w-1/2">
+                        <div className="flex gap-4 mx-auto items-center">
+                            <Image src={cards[currentIndex].icon} alt="icon" width={45} height={45} />
+                            <h1 className="text-2xl text-textPrimary">{cards[currentIndex].title}</h1>
+                        </div>
+
+                        <div className="flex flex-col space-y-2 items-center">
+                            <h1 className="text-xl text-textPrimary my-2">Project Usages</h1>
+                            {cards[currentIndex].links.map((link, idx) => (
+                                <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="text-sm text-links hover:underline">
+                                    {link.label}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Always visible */}
+                    <div className="mt-4 w-1/2">
+                        <CircleProgressBar percentage={cards[currentIndex].percentage} />
+                    </div>
+
+                    {/* lg+ content */}
+                    <div className="flex sm:hidden lg:flex flex-col space-y-4 text-center font-semibold w-full">
+
+                        <div className="flex flex-col space-y-2 items-center px-4">
+                            <h1 className="text-xl text-textPrimary mb-1">Project Usages</h1>
+                            {cards[currentIndex].links.map((link, idx) => (
+                                <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="text-sm text-links hover:underline">
+                                    {link.label}
+                                </a>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

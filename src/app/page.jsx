@@ -109,6 +109,9 @@ const contacts = [
           <div className="flex flex-col xl:flex-row gap-10 mx-auto">
             <div className="flex gap-10 flex-col lg:flex-row mx-auto">
 
+              {/* profile picture */}
+              <div data-aos="fade-down" className="block lg:hidden rounded-xl border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md bg-[url('/profile_two.jpg')] bg-cover bg-no-repeat bg-center mx-auto w-full h-[350px]"></div>
+
               {/* about me info */}
               <div data-aos="fade-right" className="flex flex-col space-y-8  bg-soft bg-opacity-80 rounded-xl p-8 lg:p-16 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
                 
@@ -144,7 +147,7 @@ const contacts = [
               <div className="flex flex-col gap-10">
 
                 {/* profile picture */}
-                <div data-aos="fade-down" className="rounded-xl border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md bg-[url('/profile_two.jpg')] bg-cover bg-no-repeat bg-center mx-auto w-[300px] h-[200px]"></div>
+                <div data-aos="fade-down" className="hidden lg:block rounded-xl border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md bg-[url('/profile_two.jpg')] bg-cover bg-no-repeat bg-center mx-auto w-[300px] h-[200px]"></div>
 
                 {/* skills and tools card */}
                 <SkillCards />
