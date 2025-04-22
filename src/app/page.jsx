@@ -132,7 +132,7 @@ const contacts = [
                           </div>
                         </div>
                         <div className="w-full bg-accentLight rounded-full h-3">
-                          <div className="bg-accent h-3 rounded-full" style={{ width: `${language.percentage}%` }}></div>
+                          <div className="bg-links h-3 rounded-full" style={{ width: `${language.percentage}%` }}></div>
                         </div>
                       </div>
                     ))}

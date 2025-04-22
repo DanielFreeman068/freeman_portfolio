@@ -40,7 +40,7 @@ const CircleProgressBar = ({ percentage }) => {
                     cx="50"
                     cy="50"
                     r="45"
-                    stroke="#6C5DD3"
+                    stroke="#5BC6FF"
                     strokeWidth="10"
                     fill="none"
                     strokeDasharray={strokeDasharray}
