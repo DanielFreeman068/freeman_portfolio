@@ -1,10 +1,10 @@
 'use client'
-
 import { useState, useEffect } from 'react';
 import Navigation from "@/app/components/Navigation";
 import SkillCards from "@/app/components/SkillCards"
 import Form from '@/app/components/Form'
 import Experience from '@/app/components/Experience';
+import Projects from '@/app/components/Projects'
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -159,7 +159,7 @@ const contacts = [
 
                 {/* contact me container and form */}
                 <div className="overflow-hidden">
-                  <div data-aos="fade-left" className="w-full flex flex-col space-y-4 p-8 bg-soft bg-opacity-80 rounded-xl border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
+                  <div data-aos="fade-left" className="w-full flex flex-col space-y-6 p-8 bg-soft bg-opacity-80 rounded-xl border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
                     <h1 className="text-2xl mb-4 font-semibold">Contact Me!</h1>
 
                     {/* contact form */}
@@ -216,8 +216,20 @@ const contacts = [
         </section>
         
         {/* Projects Section */}
-        <section id="projects" className="min-h-screen px-8 py-16 flex flex-col justify-center">
-          <h2 className="text-3xl font-bold mb-6">Projects</h2>
+        <section id="projects" className="min-h-screen px-8 py-16 flex flex-col text-center mx-auto">
+          <h2 className="mb-16 text-3xl w-fit mx-auto font-bold relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-all after:duration-300 hover:after:w-0">
+            Projects
+          </h2>
+
+          {/* experience card wrapper */}
+          <div className="relative z-0 flex flex-col items-center mt-20">
+            <div className="flex flex-wrap justify-center gap-16 mx-8 relative z-0">
+
+              {/* project cards */}
+              <Projects />
+            </div>
+          </div>
+
         </section>
       </div>
     </main>

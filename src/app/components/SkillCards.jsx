@@ -52,24 +52,6 @@ const cards = [
     },
     {
         id: 5,
-        icon: '/icons/python.png',
-        title: 'Python',
-        percentage: 80,
-        links: [
-            { label: 'File Manipulation', url: 'https://github.com/DanielFreeman068/File-Manipulator.git' },
-        ]
-    },
-    {
-        id: 6,
-        icon: '/icons/typescript.png',
-        title: 'Typescript',
-        percentage: 35,
-        links: [
-            { label: 'Typescript Mini Projects', url: 'https://github.com/DanielFreeman068/typescript.git' },
-        ]
-    },
-    {
-        id: 7,
         icon: '/icons/node-js.png',
         title: 'Node',
         percentage: 85,
@@ -80,7 +62,7 @@ const cards = [
         ]
     },
     {
-        id: 8,
+        id: 6,
         icon: '/icons/mongodb.png',
         title: 'MongoDB',
         percentage: 90,
@@ -91,7 +73,18 @@ const cards = [
         ]
     },
     {
-        id: 9,
+        id: 7,
+        icon: '/icons/next.png',
+        title: 'NextJS',
+        percentage: 75,
+        links: [
+            { label: 'Recreation of First Portfolio', url: 'https://github.com/DanielFreeman068/next_portfolio.git' },
+            { label: 'Pokemon API Data Fetcher', url: 'https://github.com/DanielFreeman068/next_data_fetching.git' },
+            { label: 'My Portfolio (This Portfolio)', url: 'https://github.com/DanielFreeman068/freeman_portfolio.git' },
+        ]
+    },
+    {
+        id: 8,
         icon: '/icons/ejs.png',
         title: 'EJS',
         percentage: 95,
@@ -101,14 +94,21 @@ const cards = [
         ]
     },
     {
-        id: 10,
-        icon: '/icons/next.png',
-        title: 'NextJS',
-        percentage: 75,
+        id: 9,
+        icon: '/icons/python.png',
+        title: 'Python',
+        percentage: 80,
         links: [
-            { label: 'Recreation of First Portfolio', url: 'https://github.com/DanielFreeman068/next_portfolio.git' },
-            { label: 'Pokemon API Data Fetcher', url: 'https://github.com/DanielFreeman068/next_data_fetching.git' },
-            { label: 'My Portfolio (This Portfolio)', url: 'https://github.com/DanielFreeman068/freeman_portfolio.git' },
+            { label: 'File Manipulation', url: 'https://github.com/DanielFreeman068/File-Manipulator.git' },
+        ]
+    },
+    {
+        id: 10,
+        icon: '/icons/typescript.png',
+        title: 'Typescript',
+        percentage: 35,
+        links: [
+            { label: 'Typescript Mini Projects', url: 'https://github.com/DanielFreeman068/typescript.git' },
         ]
     },
 ];
@@ -126,7 +126,7 @@ const cards = [
 
     return (
         <div data-aos="fade-up" className="flex flex-col items-center">
-            <div className="relative w-full lg:w-[300px] h-[465px] sm:h-[300px] lg:min-h-[465px] shadow-lg rounded-xl">
+            <div className="relative w-full lg:w-[300px] h-[465px] sm:h-[300px] lg:min-h-[530px] shadow-lg rounded-xl">
                 {/* Arrows */}
                 <div className="absolute top-1/2 -left-5 -translate-y-1/2 z-10">
                     <ChevronLeft onClick={prevCard} className='text-primary bg-white rounded-full shadow-md h-[35px] w-[35px] duration-100 transition-shadow hover:shadow-textMuted hover:shadow-md hover:cursor-pointer' />
@@ -140,7 +140,7 @@ const cards = [
 
                     {/* lg+ content */}
                     <div className="flex sm:hidden lg:flex flex-col space-y-4 text-center font-semibold w-full">
-                        <div className="flex gap-4 mx-auto items-center mt-4">
+                        <div className="flex gap-4 mx-auto items-center">
                             <Image src={cards[currentIndex].icon} alt="icon" width={45} height={45} />
                             <h1 className="text-2xl text-textPrimary">{cards[currentIndex].title}</h1>
                         </div>
@@ -181,13 +181,18 @@ const cards = [
                         </div>
                     </div>
                 </div>
-            </div>
 
-            {/* Dots */}
-            <div className="mt-4 flex space-x-2">
-                {cards.map((_, idx) => (
-                    <span key={idx} className={`w-3 h-3 rounded-full transition-colors duration-200 bg-textPrimary ${ currentIndex === idx ? 'opacity-100' : 'opacity-20'}`}/>
-                ))}
+                {/* dots */}
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+                    {cards.map((_, idx) => (
+                        <span
+                            key={idx}
+                            className={`w-3 h-3 rounded-full transition-colors duration-200 bg-textPrimary ${
+                                currentIndex === idx ? 'opacity-100' : 'opacity-20'
+                            }`}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );

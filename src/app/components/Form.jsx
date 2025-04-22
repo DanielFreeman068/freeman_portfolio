@@ -43,7 +43,7 @@ export default function ContactForm() {
 
     return (
         <div className="flex flex-col space-y-4">
-            <div className="flex gap-4 mx-auto items-center text-left w-full">
+            <div className="flex gap-6 mx-auto items-center text-left w-full">
                 <img src="/social_icons/mail.png" alt="Email" width={50} height={50} />
                 <div className="flex flex-col gap-2 text-wrap">
                     <h1 className="text-xl">Email</h1>
@@ -51,7 +51,7 @@ export default function ContactForm() {
                 </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full">
                 <input
                     type="email"
                     name="email"
