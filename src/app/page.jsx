@@ -216,7 +216,7 @@ const contacts = [
         </section>
         
         {/* Projects Section */}
-        <section id="projects" className="min-h-screen px-8 py-16 flex flex-col text-center mx-auto">
+        <section id="projects" className="min-h-screen py-16 flex flex-col text-center mx-auto">
           <h2 className="mb-16 text-3xl w-fit mx-auto font-bold relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-all after:duration-300 hover:after:w-0">
             Projects
           </h2>

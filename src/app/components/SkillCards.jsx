@@ -45,7 +45,7 @@ const cards = [
         title: 'JavaScript',
         percentage: 90,
         links: [
-            { label: 'JQuery Maze Game', url: 'https://github.com/DanielFreeman068/jquery-maze.git' },
+            { label: 'JQuery Maze Game', url: 'https://github.com/DanielFreeman068/jquery_maze_game.git' },
             { label: 'Tic Tac Toe', url: 'https://github.com/DanielFreeman068/TicTacToe.git' },
             { label: 'Jolt Mobile App', url: 'https://github.com/DanielFreeman068/fbla-mad-cordova-nationals.git' },
         ]
