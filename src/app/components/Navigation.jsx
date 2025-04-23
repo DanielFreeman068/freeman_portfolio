@@ -103,7 +103,7 @@ export default function SvgHexagonNav() {
     };
     
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 flex flex-col items-center py-6 bg-accentDark bg-opacity-80">
+        <div className="fixed top-0 left-0 right-0 z-10 flex flex-col items-center py-6 bg-accentDark bg-opacity-80">
             <div className="flex items-center justify-center space-x-16 py-2">
                 <NavItem 
                     id="about" 

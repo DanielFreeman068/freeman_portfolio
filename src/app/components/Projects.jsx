@@ -1,10 +1,48 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
+
+    // use effect to check when modal is open and take away the ability for users to scroll
+    useEffect(() => {
+        if (selectedProject) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [selectedProject]);    
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 10 },
+        visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: 'spring',
+            stiffness: 300,
+            damping: 20,
+        },
+        },
+    };
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+            duration: 0.5,
+            delayChildren: 0.5,
+            staggerChildren: 0.25,
+            },
+        },
+    };
 
     const projects = [
         {
@@ -20,17 +58,87 @@ const Projects = () => {
                 "/icons/js.png",
             ]
         },
+        {
+            id: 2,
+            label: 'Pet Adoption Platform',
+            desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
+            image: '/projects/PetAdoptionImage.png',
+            link: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
+            icons: [
+                "/icons/ejs.png",
+                "/icons/css.png",
+                "/icons/node-js.png",
+                "/icons/js.png",
+            ]
+        },
+        {
+            id: 3,
+            label: 'Pet Adoption Platform',
+            desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
+            image: '/projects/PetAdoptionImage.png',
+            link: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
+            icons: [
+                "/icons/ejs.png",
+                "/icons/css.png",
+                "/icons/node-js.png",
+                "/icons/js.png",
+            ]
+        },
+        {
+            id: 4,
+            label: 'Pet Adoption Platform',
+            desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
+            image: '/projects/PetAdoptionImage.png',
+            link: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
+            icons: [
+                "/icons/ejs.png",
+                "/icons/css.png",
+                "/icons/node-js.png",
+                "/icons/js.png",
+            ]
+        },
+        {
+            id: 5,
+            label: 'Pet Adoption Platform',
+            desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
+            image: '/projects/PetAdoptionImage.png',
+            link: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
+            icons: [
+                "/icons/ejs.png",
+                "/icons/css.png",
+                "/icons/node-js.png",
+                "/icons/js.png",
+            ]
+        },
+        {
+            id: 6,
+            label: 'Pet Adoption Platform',
+            desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
+            image: '/projects/PetAdoptionImage.png',
+            link: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
+            icons: [
+                "/icons/ejs.png",
+                "/icons/css.png",
+                "/icons/node-js.png",
+                "/icons/js.png",
+            ]
+        },
     ];
 
     return (
-        <div className="mx-auto mt-8 grid grid-cols-1 gap-6">
+        <div className="flex flex-wrap justify-center gap-16 mx-8 relative z-0">
             {projects.map((project) => (
-                <motion.div data-aos="fade-up" key={project.id} className="relative w-[330px] md:w-[400px] h-[300px] rounded-xl overflow-hidden shadow-lg group cursor-pointer" whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <motion.div data-aos="fade-up" key={project.id} className="relative w-[330px] md:w-[400px] h-[300px] border-2 border-color-textMuted rounded-xl overflow-hidden shadow-lg group cursor-pointer" whileHover={{ scale: 1.05 }} transition={{ duration: 0.1 }} style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                     <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out backdrop-blur-sm rounded-xl" />
 
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
                         <h1 className="text-2xl font-semibold mb-4">{project.label}</h1>
-                        <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} onClick={() => setSelectedProject(project)} className="px-6 py-2 bg-accentDark border-2 border-white rounded-full">
+                        <motion.button
+                            variants={itemVariants}
+                            whileHover={{ scale: 1.2 }}
+                            transition={{ type: 'spring', stiffness: 300 }}
+                            onClick={() => setSelectedProject(project)}
+                            className="px-6 py-2 bg-accentDark border-2 border-white rounded-full">
                             View Project
                         </motion.button>
                     </div>
@@ -39,13 +147,13 @@ const Projects = () => {
 
            {/* Modal */}
             {selectedProject && (
-                <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center z-50 px-4 py-8">
+                <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center z-20 px-4 py-8">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.95 }}
-                        transition={{ duration: 0.3 }}
-                        className="bg-soft bg-opacity-70 border-2 border-color-textMuted rounded-xl shadow-lg w-full max-w-2xl p-8 relative"
+                        transition={{ duration: .8 }}
+                        className="bg-soft bg-opacity-70 border-2 border-color-textMuted rounded-xl shadow-lg mt-12 w-full max-w-2xl p-8 relative"
                     >
                         {/* exit button */}
                         <button onClick={() => setSelectedProject(null)} className="absolute top-0 right-2 text-white hover:text-red-500 text-4xl font-bold">×</button>
@@ -58,11 +166,24 @@ const Projects = () => {
                         <p className="mb-4 text-sm sm:text-base">{selectedProject.desc}</p>
 
                         {/* languages used */}
-                        <div className="flex flex-wrap justify-center gap-4 mb-6">
+                        <motion.div
+                            variants={containerVariants}
+                            initial="hidden"
+                            animate={selectedProject ? "visible" : "hidden"}
+                            className="flex flex-wrap justify-center gap-4 mb-6"
+                        >
                             {selectedProject.icons.map((icon, index) => (
-                                <Image key={index} src={icon} alt="Tech Icon" width={40} height={40} />
+                                <motion.div
+                                    key={index}
+                                    variants={itemVariants}
+                                    whileHover={{ scale: 1.1 }}
+                                    transition={{ type: 'spring', stiffness: 300 }}
+                                    className='flex items-center'
+                                >
+                                    <Image key={index} src={icon} alt="Tech Icon" width={40} height={40} />
+                                </motion.div>
                             ))}
-                        </div>
+                        </motion.div>
 
                         {/* view on github button */}
                         <div className="text-center">
@@ -70,9 +191,10 @@ const Projects = () => {
                                 href={selectedProject.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                variants={itemVariants}
                                 whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="inline-block bg-accentDark text-white px-6 py-2 rounded-full hover:bg-accentDark/80 transition text-sm sm:text-base"
+                                transition={{ type: 'spring', stiffness: 300 }}
+                                className="inline-block bg-accentDark text-white px-6 py-2 rounded-full border-2 border-textMute text-sm sm:text-base"
                             >
                                 View on GitHub
                             </motion.a>

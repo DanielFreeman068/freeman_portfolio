@@ -46,7 +46,7 @@ export default function Home() {
           }
         },
         {
-          threshold: 1, // 50% of the element must be in view
+          threshold: 1,
         }
       );
   
@@ -223,11 +223,9 @@ const contacts = [
 
           {/* experience card wrapper */}
           <div className="relative z-0 flex flex-col items-center mt-20">
-            <div className="flex flex-wrap justify-center gap-16 mx-8 relative z-0">
 
-              {/* project cards */}
-              <Projects />
-            </div>
+            {/* project cards */}
+            <Projects />
           </div>
 
         </section>

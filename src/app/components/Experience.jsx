@@ -1,7 +1,22 @@
+'use client'
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const Experience = () => {
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 10 },
+        visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: 'spring',
+            stiffness: 300,
+            damping: 20,
+        },
+        },
+    };
+
     // Certifications Data
     const certifications = [
         {
@@ -125,10 +140,24 @@ const Experience = () => {
                 <ExperienceCard key={index} job={job} index={index} />
                 ))}
             </div>
+            
+            <div data-aos='fade-up'>
+                <motion.a
+                    href='/Daniel Freeman Resume.pdf'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
+                    className="inline-block bg-accentDark text-white px-6 py-2 rounded-full border-2 border-textMute text-sm sm:text-base mt-24 mb-10"
+                >
+                    View Full Resume
+                </motion.a>
+            </div>
 
             {/* certifications */}
             <div className="mt-8">
-                <h3 className="text-2xl font-semibold mb-4">Certifications</h3>
+                <h3 className="text-2xl font-semibold mb-10">Certifications</h3>
                 <div className="flex flex-wrap gap-6 justify-center">
                 {certifications.map(cert => (
                     <div data-aos="fade-up" key={cert.id} className="max-w-[300px]  bg-soft bg-opacity-80 rounded-xl p-8 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md flex flex-col items-center">

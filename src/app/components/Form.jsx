@@ -67,7 +67,7 @@ export default function ContactForm() {
                     onChange={handleChange}
                     placeholder="Your message"
                     required
-                    className="border text-black focus:outline-accent p-2 rounded min-h-[200px] w-full min-w-[240px]"
+                    className="border text-black focus:outline-accent p-2 rounded min-h-[200px] w-full min-w-[240px] resize-none"
                 />
                 <button type="submit" className="text-textPrimary py-2 rounded bg-accent hover:bg-accentLight w-full">
                     Send Message
