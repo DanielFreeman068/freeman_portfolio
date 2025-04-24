@@ -1,10 +1,10 @@
 'use client'
 import { useState, useEffect } from 'react';
 import Navigation from "@/app/components/Navigation";
-import SkillCards from "@/app/components/SkillCards"
-import Form from '@/app/components/Form'
+import SkillCards from "@/app/components/SkillCards";
+import Form from '@/app/components/Form';
 import Experience from '@/app/components/Experience';
-import Projects from '@/app/components/Projects'
+import Projects from '@/app/components/Projects';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -230,6 +230,41 @@ const contacts = [
 
         </section>
       </div>
+
+      {/* footer section */}
+      <footer className="bg-footer text-white py-8 px-6 mt-8 w-full">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 md:flex md:justify-center gap-8 md:gap-20 lg:gap-32 xl:gap-48 text-center md:text-left">
+
+                {/* Connect with Me Section */}
+                <div>
+                    <h3 className="text-lg font-semibold mb-3 text-textSecondary">Connect with Me</h3>
+                    <div className="flex flex-row mx-auto gap-8 justify-center md:justify-start">
+                        {contacts.map(({ id, label, icon, link }) => (
+                            <motion.div
+                            key={id}
+                            className="flex flex-col items-center gap-2 w-fit"
+                            variants={itemVariants}
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ type: 'spring', stiffness: 300 }}
+                            >
+                            <a href={link} target="_blank" rel="noopener noreferrer">
+                                <Image src={icon} alt={label} width={30} height={30} />
+                            </a>
+                            <h1 className="text-sm">{label}</h1>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Copyright Section */}
+                <div>
+                    <h3 className="text-lg font-semibold mb-3 text-textSecondary">Legal</h3>
+                    <p className="text-white text-sm">
+                        © {new Date().getFullYear()} Daniel Freeman. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
     </main>
   );
 }

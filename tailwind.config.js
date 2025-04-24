@@ -12,6 +12,7 @@ module.exports = {
 		extend: {
 			colors: {
 			primary: '#211A49', // main background
+			footer: '#1A1538',
 	
 			// Complementary neutrals
 			surface: '#2A225C',
