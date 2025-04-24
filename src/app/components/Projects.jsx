@@ -52,89 +52,24 @@ const Projects = () => {
             desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
             image: '/projects/PetAdoptionImage.png',
             link: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
+            isLive: true,
             icons: [
                 "/icons/ejs.png",
                 "/icons/css.png",
                 "/icons/node-js.png",
-                "/icons/js.png",
             ]
         },
         {
             id: 2,
-            label: 'Pet Adoption Platform',
+            label: 'Event Registration',
             desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
-            image: '/projects/PetAdoptionImage.png',
+            image: '/projects/eventRegistrationImage.png',
             link: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
+            isLive: false,
             icons: [
                 "/icons/ejs.png",
                 "/icons/css.png",
                 "/icons/node-js.png",
-                "/icons/js.png",
-            ]
-        },
-        {
-            id: 3,
-            label: 'Pet Adoption Platform',
-            desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
-            image: '/projects/PetAdoptionImage.png',
-            link: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
-            icons: [
-                "/icons/ejs.png",
-                "/icons/css.png",
-                "/icons/node-js.png",
-                "/icons/js.png",
-            ]
-        },
-        {
-            id: 4,
-            label: 'Pet Adoption Platform',
-            desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
-            image: '/projects/PetAdoptionImage.png',
-            link: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
-            icons: [
-                "/icons/ejs.png",
-                "/icons/css.png",
-                "/icons/node-js.png",
-                "/icons/js.png",
-            ]
-        },
-        {
-            id: 5,
-            label: 'Pet Adoption Platform',
-            desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
-            image: '/projects/PetAdoptionImage.png',
-            link: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
-            icons: [
-                "/icons/ejs.png",
-                "/icons/css.png",
-                "/icons/node-js.png",
-                "/icons/js.png",
-            ]
-        },
-        {
-            id: 6,
-            label: 'Pet Adoption Platform',
-            desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
-            image: '/projects/PetAdoptionImage.png',
-            link: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
-            icons: [
-                "/icons/ejs.png",
-                "/icons/css.png",
-                "/icons/node-js.png",
-                "/icons/js.png",
-            ]
-        },
-        {
-            id: 6,
-            label: 'Pet Adoption Platform',
-            desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
-            image: '/projects/PetAdoptionImage.png',
-            link: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
-            icons: [
-                "/icons/ejs.png",
-                "/icons/css.png",
-                "/icons/node-js.png",
-                "/icons/js.png",
             ]
         },
     ];
