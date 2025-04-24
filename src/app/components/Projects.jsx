@@ -124,6 +124,19 @@ const Projects = () => {
                 "/icons/js.png",
             ]
         },
+        {
+            id: 6,
+            label: 'Pet Adoption Platform',
+            desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
+            image: '/projects/PetAdoptionImage.png',
+            link: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
+            icons: [
+                "/icons/ejs.png",
+                "/icons/css.png",
+                "/icons/node-js.png",
+                "/icons/js.png",
+            ]
+        },
     ];
 
     const showMore = () => {
@@ -135,8 +148,8 @@ const Projects = () => {
     };
 
     return (
-        <>
-            <div className="flex flex-wrap justify-center gap-16 mx-8 relative z-0">
+        <div>
+            <div className="flex flex-wrap justify-center gap-16 mx-8 relative z-10">
                 {projects.slice(0, visibleCount).map((project) => (
                     <motion.div data-aos="fade-up" key={project.id} className="relative w-[330px] md:w-[400px] h-[300px] border-2 border-color-textMuted rounded-xl overflow-hidden shadow-lg group cursor-pointer" whileHover={{ scale: 1.05 }} transition={{ duration: 0.1 }} style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                         <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out backdrop-blur-sm rounded-xl" />
@@ -214,7 +227,7 @@ const Projects = () => {
                 )}
             </div>
             {/* View More / Show Less Buttons */}
-            <div data-aos='fade-up' className="flex gap-4 mt-20">
+            <div data-aos='fade-up' className="flex gap-4 mt-20 relative z-0 justify-center">
                 {visibleCount < projects.length && (
                     <motion.button
                         onClick={showMore}
@@ -238,7 +251,7 @@ const Projects = () => {
                     </motion.button>
                 )}
             </div>
-        </>
+        </div>
     );
 };
 
