@@ -23,7 +23,7 @@ const cards = [
         title: 'HTML5',
         percentage: 100,
         links: [
-            { label: 'First Portfolio', url: 'https://github.com/DanielFreeman068/Portfolio.git' },
+            { label: 'Christmas Website', url: 'https://github.com/DanielFreeman068/ChristmasProject.git' },
             { label: 'Summer Site', url: 'https://github.com/DanielFreeman068/summberSite.git' },
             { label: 'Jquery Maze Game', url: 'https://github.com/DanielFreeman068/jquery_maze_game.git' },
         ]
@@ -35,7 +35,7 @@ const cards = [
         percentage: 95,
         links: [
             { label: 'Pet Adoption Platform', url: 'https://github.com/DanielFreeman068/Pet-Adoption-Platform.git' },
-            { label: 'Event Registration Platform', url: 'https://github.com/DanielFreeman068/EJS--Event-Registration.git' },
+            { label: 'React Blog', url: 'https://github.com/DanielFreeman068/react_blog' },
             { label: 'Jolt Mobile App', url: 'https://github.com/DanielFreeman068/fbla-mad-cordova-nationals.git' },
         ]
     },
@@ -74,6 +74,17 @@ const cards = [
     },
     {
         id: 7,
+        icon: '/icons/tailwind.svg',
+        title: 'Tailwind',
+        percentage: 95,
+        links: [
+            { label: 'Cash Compass', url: 'https://github.com/DanielFreeman068/fbla_cash_compass.git' },
+            { label: 'Boy Scout 747', url: 'https://github.com/RenLevingar/boy_scout_747.git' },
+            { label: 'My Portfolio (This Portfolio)', url: 'https://github.com/DanielFreeman068/freeman_portfolio.git' },
+        ]
+    },
+    {
+        id: 8,
         icon: '/icons/next.png',
         title: 'NextJS',
         percentage: 75,
@@ -84,7 +95,7 @@ const cards = [
         ]
     },
     {
-        id: 8,
+        id: 9,
         icon: '/icons/ejs.png',
         title: 'EJS',
         percentage: 95,
@@ -94,7 +105,7 @@ const cards = [
         ]
     },
     {
-        id: 9,
+        id: 10,
         icon: '/icons/python.png',
         title: 'Python',
         percentage: 80,
@@ -103,7 +114,7 @@ const cards = [
         ]
     },
     {
-        id: 10,
+        id: 11,
         icon: '/icons/typescript.png',
         title: 'Typescript',
         percentage: 35,

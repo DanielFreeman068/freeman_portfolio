@@ -51,12 +51,13 @@ const Projects = () => {
             label: 'Pet Adoption Platform',
             desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
             image: '/projects/PetAdoptionImage.png',
-            link: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
+            link: "https://pet-adoption-platform-y46p.onrender.com",
             isLive: true,
             icons: [
                 "/icons/ejs.png",
                 "/icons/css.png",
                 "/icons/node-js.png",
+                "/icons/mongodb.png",
             ]
         },
         {
@@ -64,12 +65,140 @@ const Projects = () => {
             label: 'Event Registration',
             desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
             image: '/projects/eventRegistrationImage.png',
-            link: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
+            link: "https://github.com/DanielFreeman068/EJS--Event-Registration.git",
             isLive: false,
             icons: [
                 "/icons/ejs.png",
                 "/icons/css.png",
                 "/icons/node-js.png",
+                "/icons/mongodb.png",
+            ]
+        },
+        {
+            id: 3,
+            label: 'Boy Scout 747',
+            desc: 'A full-stack web app for Boy Scout Troop 747, built with React, Tailwind, Node.js, and MongoDB, serving as a digital hub with troop info, event calendar, photo gallery, online forms, and an admin dashboard.',
+            image: '/projects/boyScout.png',
+            link: "https://troop747.onrender.com/",
+            isLive: true,
+            icons: [
+                "/icons/react.png",
+                "/icons/tailwind.svg",
+                "/icons/node-js.png",
+                "/icons/mongodb.png",
+            ]
+        },
+        {
+            id: 4,
+            label: 'My API',
+            desc: 'A custom API project I coded to form a better understanding in RESTUL API that provides JSON data of 50 musical artists, including instructions on how to retrieve said data.',
+            image: '/projects/APIImage.png',
+            link: "https://github.com/DanielFreeman068/myAPI.git",
+            isLive: false,
+            icons: [
+                "/icons/ejs.png",
+                "/icons/css.png",
+                "/icons/node-js.png",
+            ]
+        },
+        {
+            id: 5,
+            label: 'React Blog Page',
+            desc: 'This is a blog that uses React to format and deliver a variety of information on trending news for various topics.',
+            image: '/projects/blog.png',
+            link: "https://github.com/DanielFreeman068/myAPI.git",
+            isLive: false,
+            icons: [
+                "/icons/react.png",
+                "/icons/css.png",
+            ]
+        },
+        {
+            id: 6,
+            label: 'Card Game API',
+            desc: 'This project uses EJS, CSS and the deckofcardsAPI for users to play games of either Blackjack or War.',
+            image: '/projects/blackjackImage.png',
+            link: "https://github.com/DanielFreeman068/Cards-API.git",
+            isLive: false,
+            icons: [
+                "/icons/ejs.png",
+                "/icons/css.png",
+            ]
+        },
+        {
+            id: 7,
+            label: 'Quizzy Bee',
+            desc: 'Quizzy Bee is a fully responsive quiz app created in React that tests users on the beautiful sport of Soccer.',
+            image: '/projects/reactQuizImage.png',
+            link: "https://quizzy-bee.netlify.app/",
+            isLive: true,
+            icons: [
+                "/icons/react.png",
+                "/icons/css.png",
+            ]
+        },
+        {
+            id: 8,
+            label: 'My Portfolio (This Portfolio)',
+            desc: 'A portfolio displaying all of my knowledge learned and project completed from West-MEC, my experience in the work force and education, and an about me section containing a contact form.',
+            image: '/projects/freemanPortfolio.png',
+            link: "https://github.com/DanielFreeman068/freeman_portfolio.git",
+            isLive: false,
+            icons: [
+                "/icons/react.png",
+                "/icons/tailwind.svg",
+            ]
+        },
+        {
+            id: 9,
+            label: 'Tic Tac Toe',
+            desc: 'This game of Tic Tac Toe utilizes HTML5, CSS, and JavaScript to allow for either a 1 or 2 player round.',
+            image: '/projects/ttt.png',
+            link: "https://danielfreeman068.github.io/TicTacToe/",
+            isLive: true,
+            icons: [
+                "/icons/html.png",
+                "/icons/css.png",
+                "/icons/js.png",
+            ]
+        },
+        {
+            id: 10,
+            label: 'Card Memory Game',
+            desc: 'This card memory game utilizes card flipping features, a timer, and a reset option displaying knowledge in HTML5, CSS and JavaScript.',
+            image: '/projects/cardMemory.png',
+            link: "https://danielfreeman068.github.io/Card-Memory/",
+            isLive: true,
+            icons: [
+                "/icons/html.png",
+                "/icons/css.png",
+                "/icons/js.png",
+            ]
+        },
+        {
+            id: 11,
+            label: 'JQuery Maze Game',
+            desc: 'This Minecraft themed maze game offers three difficulty levels of mazes utilizing languages such as HTML5, CSS and JavaScript.',
+            image: '/projects/maze.png',
+            link: "https://danielfreeman068.github.io/jquery_maze_game/",
+            isLive: true,
+            icons: [
+                "/icons/html.png",
+                "/icons/css.png",
+                "/icons/js.png",
+            ]
+        },
+        {
+            id: 12,
+            label: 'Calculator',
+            desc: 'This calculator was one of my first projects as a coder. It utilizes three languages: HTML5, CSS and JavaScript',
+            image: '/projects/calc.png',
+            link: "https://danielfreeman068.github.io/calculator/",
+            isLive: true,
+            icons: [
+                "/icons/html.png",
+                "/icons/css.png",
+                "/icons/js.png",
             ]
         },
     ];
@@ -154,7 +283,7 @@ const Projects = () => {
                                     transition={{ type: 'spring', stiffness: 300 }}
                                     className="inline-block bg-accentDark text-white px-6 py-2 rounded-full border-2 border-textMute text-sm sm:text-base"
                                 >
-                                    View on GitHub
+                                    {selectedProject.isLive ? 'View Live Site' : 'View on Github'}
                                 </motion.a>
                             </div>
                         </motion.div>
