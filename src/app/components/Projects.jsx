@@ -92,7 +92,7 @@ const Projects = () => {
             id: 4,
             label: 'My API',
             desc: 'A custom API project I coded to form a better understanding in RESTUL API that provides JSON data of 50 musical artists, including instructions on how to retrieve said data.',
-            image: '/projects/APIImage.png',
+            image: '/projects/api.png',
             link: "https://github.com/DanielFreeman068/myAPI.git",
             isLive: false,
             icons: [
