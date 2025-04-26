@@ -24,7 +24,7 @@ const cards = [
         percentage: 100,
         links: [
             { label: 'Christmas Website', url: 'https://github.com/DanielFreeman068/ChristmasProject.git' },
-            { label: 'Summer Site', url: 'https://github.com/DanielFreeman068/summberSite.git' },
+            { label: 'Jolt Mobile App', url: 'https://github.com/DanielFreeman068/fbla-mad-cordova-nationals.git' },
             { label: 'Jquery Maze Game', url: 'https://github.com/DanielFreeman068/jquery_maze_game.git' },
         ]
     },
@@ -111,6 +111,7 @@ const cards = [
         percentage: 80,
         links: [
             { label: 'File Manipulation', url: 'https://github.com/DanielFreeman068/File-Manipulator.git' },
+            { label: 'Christmas Website', url: 'https://github.com/DanielFreeman068/ChristmasProject.git' },
         ]
     },
     {
