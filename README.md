@@ -26,8 +26,7 @@ Welcome to my personal portfolio built with [Next.js](https://nextjs.org/) and [
 
 ## 📸 Preview
 
-![Portfolio Preview](/public/projects/portfolio.png)  
-<sub>Replace `preview.jpg` with a screenshot or gif of your portfolio</sub>
+![Portfolio Preview](/public/projects/freemanPortfolio.png)  
 
 ---
 
