@@ -20,12 +20,12 @@ const cards = [
     {
         id: 2,
         icon: '/icons/html.png',
-        title: 'HTML5',
+        title: 'HTML5 & XHTML',
         percentage: 100,
         links: [
-            { label: 'Christmas Website', url: 'https://github.com/DanielFreeman068/ChristmasProject.git' },
+            { label: 'Pet Adoption Platform', url: 'https://github.com/DanielFreeman068/Pet-Adoption-Platform.git' },
+            { label: 'Event Registration Platform', url: 'https://github.com/DanielFreeman068/EJS--Event-Registration.git' },
             { label: 'Jolt Mobile App', url: 'https://github.com/DanielFreeman068/fbla-mad-cordova-nationals.git' },
-            { label: 'Jquery Maze Game', url: 'https://github.com/DanielFreeman068/jquery_maze_game.git' },
         ]
     },
     {
@@ -96,26 +96,15 @@ const cards = [
     },
     {
         id: 9,
-        icon: '/icons/ejs.png',
-        title: 'EJS',
-        percentage: 95,
-        links: [
-            { label: 'Pet Adoption Platform', url: 'https://github.com/DanielFreeman068/Pet-Adoption-Platform.git' },
-            { label: 'Event Registration Platform', url: 'https://github.com/DanielFreeman068/EJS--Event-Registration.git' },
-        ]
-    },
-    {
-        id: 10,
         icon: '/icons/python.png',
         title: 'Python',
         percentage: 80,
         links: [
             { label: 'File Manipulation', url: 'https://github.com/DanielFreeman068/File-Manipulator.git' },
-            { label: 'Christmas Website', url: 'https://github.com/DanielFreeman068/ChristmasProject.git' },
         ]
     },
     {
-        id: 11,
+        id: 10,
         icon: '/icons/typescript.png',
         title: 'Typescript',
         percentage: 35,
