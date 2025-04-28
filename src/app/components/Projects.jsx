@@ -58,7 +58,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 1,
             label: 'Pet Adoption Platform',
-            desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
+            desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption. For admin usage there is functionality to delete and edit pets and people signed up.',
             image: '/projects/petAdoption.png',
             link: "https://pet-adoption-platform-y46p.onrender.com",
             isLive: true,
@@ -73,7 +73,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 2,
             label: 'Event Registration',
-            desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
+            desc: 'A full stack event registration platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers browse and sign up for events. For admin usage there is functionality to delete and edit events as well.',
             image: '/projects/eventRegistrationImage.png',
             link: "https://github.com/DanielFreeman068/EJS--Event-Registration.git",
             isLive: false,
@@ -164,6 +164,35 @@ const Projects = ({ setIsModalOpen }) => {
         },
         {
             id: 9,
+            label: 'Cash Compass (Financial Tracker)',
+            desc: 'Taking 5th Place at FBLA State and qualifying for Nationals, Cash Compass is a financial tracker built for students to input transactions and track their finances through many forms of data charts and budgeting assistance. This project relies on Mongodb and NodeJS for backend with React and Tailwind delivering well formatted and responsively designed data to the user.',
+            image: '/projects/cashCompass.png',
+            link: "https://github.com/DanielFreeman068/fbla_cash_compass.git",
+            isLive: false,
+            icons: [
+                "/icons/react.png",
+                "/icons/tailwind.svg",
+                "/icons/node-js.png",
+                "/icons/mongodb.png",
+            ]
+        },
+        {
+            id: 10,
+            label: 'Jolt Mobile App',
+            desc: 'WRITE DESCRIPTION',
+            image: '/projects/joltMobile.png',
+            link: "https://github.com/DanielFreeman068/fbla-mad-cordova-nationals.git",
+            isLive: false,
+            icons: [
+                "/icons/html.png",
+                "/icons/css.png",
+                "/icons/js.png",
+                "/icons/node-js.png",
+                "/icons/mongodb.png",
+            ]
+        },
+        {
+            id: 14,
             label: 'Tic Tac Toe',
             desc: 'This game of Tic Tac Toe utilizes HTML5, CSS, and JavaScript to allow for either a 1 or 2 player round.',
             image: '/projects/ttt.png',
@@ -177,7 +206,7 @@ const Projects = ({ setIsModalOpen }) => {
             ]
         },
         {
-            id: 10,
+            id: 15,
             label: 'Card Memory Game',
             desc: 'This card memory game utilizes card flipping features, a timer, and a reset option displaying knowledge in HTML5, CSS and JavaScript.',
             image: '/projects/cardMemory.png',
@@ -191,7 +220,7 @@ const Projects = ({ setIsModalOpen }) => {
             ]
         },
         {
-            id: 11,
+            id: 16,
             label: 'JQuery Maze Game',
             desc: 'This Minecraft themed maze game offers three difficulty levels of mazes utilizing languages such as HTML5, CSS and JavaScript.',
             image: '/projects/maze.png',
@@ -205,7 +234,7 @@ const Projects = ({ setIsModalOpen }) => {
             ]
         },
         {
-            id: 12,
+            id: 17,
             label: 'Calculator',
             desc: 'This calculator was one of my first projects as a coder. It utilizes three languages: HTML5, CSS and JavaScript',
             image: '/projects/calc.png',
@@ -257,13 +286,13 @@ const Projects = ({ setIsModalOpen }) => {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.95 }}
                             transition={{ duration: .8 }}
-                            className="bg-soft bg-opacity-70 border-2 border-color-textMuted rounded-xl shadow-lg mt-12 w-full max-w-2xl p-8 relative"
+                            className="bg-soft bg-opacity-70 border-2 border-color-textMuted rounded-xl shadow-lg w-full max-w-2xl p-8 relative"
                         >
                             {/* exit button */}
                             <button onClick={() => {setSelectedProject(null), closeModal()}} className="absolute top-0 right-2 text-white hover:text-red-500 text-4xl font-bold">×</button>
 
                             {/* image */}
-                            <Image src={selectedProject.image} alt={selectedProject.label} width={600} height={300} className="rounded-lg mb-4 object-cover w-full h-72"/>
+                            <Image src={selectedProject.image} alt={selectedProject.label} width={600} height={300} className="rounded-lg mb-4 object-cover w-full h-76"/>
 
                             {/* title and description */}
                             <h2 className="text-2xl font-semibold mb-2 text-center">{selectedProject.label}</h2>
