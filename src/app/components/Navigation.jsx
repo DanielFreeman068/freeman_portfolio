@@ -1,9 +1,9 @@
 "use client"
 import { useState, useEffect } from 'react';
 
-export default function SvgHexagonNav() {
+export default function SvgHexagonNav({ isModalOpen }) {
     const [activeSection, setActiveSection] = useState('about');
-    
+
     //use effect with function to check where user is at pixel wise from the top of the screen in order to identify which section the user is currently on
     useEffect(() => {
         const handleScroll = () => {
@@ -103,26 +103,28 @@ export default function SvgHexagonNav() {
     };
     
     return (
-        <div className="fixed top-0 left-0 right-0 z-10 flex flex-col items-center py-6 bg-accentDark bg-opacity-80">
-            <div className="flex items-center justify-center space-x-16 py-2">
-                <NavItem 
-                    id="about" 
-                    isActive={activeSection === 'about'} 
-                    label="About Me"
-                />
-                
-                <NavItem 
-                    id="experience" 
-                    isActive={activeSection === 'experience'} 
-                    label="Experience"
-                />
-                
-                <NavItem 
-                    id="projects" 
-                    isActive={activeSection === 'projects'} 
-                    label="Projects"
-                />
+        !isModalOpen && (
+            <div className="fixed top-0 left-0 right-0 z-10 flex flex-col items-center py-6 bg-accentDark bg-opacity-80">
+                <div className="flex items-center justify-center space-x-16 py-2">
+                    <NavItem 
+                        id="about" 
+                        isActive={activeSection === 'about'} 
+                        label="About Me"
+                    />
+                    
+                    <NavItem 
+                        id="experience" 
+                        isActive={activeSection === 'experience'} 
+                        label="Experience"
+                    />
+                    
+                    <NavItem 
+                        id="projects" 
+                        isActive={activeSection === 'projects'} 
+                        label="Projects"
+                    />
+                </div>
             </div>
-        </div>
+        )
     );
 }

@@ -3,9 +3,18 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const Projects = () => {
+const Projects = ({ setIsModalOpen }) => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [visibleCount, setVisibleCount] = useState(6);
+
+    //functions for modal use state control
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
     // use effect to check when modal is open and take away the ability for users to scroll
     useEffect(() => {
@@ -50,9 +59,10 @@ const Projects = () => {
             id: 1,
             label: 'Pet Adoption Platform',
             desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.',
-            image: '/projects/PetAdoptionImage.png',
+            image: '/projects/petAdoption.png',
             link: "https://pet-adoption-platform-y46p.onrender.com",
             isLive: true,
+            github: "https://github.com/DanielFreeman068/Pet-Adoption-Platform.git",
             icons: [
                 "/icons/ejs.png",
                 "/icons/css.png",
@@ -81,6 +91,7 @@ const Projects = () => {
             image: '/projects/boyScout.png',
             link: "https://troop747.onrender.com/",
             isLive: true,
+            github: "https://github.com/RenLevingar/boy_scout_747.git",
             icons: [
                 "/icons/react.png",
                 "/icons/tailwind.svg",
@@ -132,6 +143,7 @@ const Projects = () => {
             image: '/projects/reactQuizImage.png',
             link: "https://quizzy-bee.netlify.app/",
             isLive: true,
+            github: "https://github.com/DanielFreeman068/react_quiz_app.git",
             icons: [
                 "/icons/react.png",
                 "/icons/css.png",
@@ -142,8 +154,9 @@ const Projects = () => {
             label: 'My Portfolio (This Portfolio)',
             desc: 'A portfolio displaying all of my knowledge learned and project completed from West-MEC, my experience in the work force and education, and an about me section containing a contact form.',
             image: '/projects/freemanPortfolio.png',
-            link: "https://github.com/DanielFreeman068/freeman_portfolio.git",
-            isLive: false,
+            link: "replaceWithLiveLinkLater",
+            isLive: true,
+            github: "https://github.com/DanielFreeman068/freeman_portfolio.git",
             icons: [
                 "/icons/react.png",
                 "/icons/tailwind.svg",
@@ -156,6 +169,7 @@ const Projects = () => {
             image: '/projects/ttt.png',
             link: "https://danielfreeman068.github.io/TicTacToe/",
             isLive: true,
+            github: "https://github.com/DanielFreeman068/TicTacToe.git",
             icons: [
                 "/icons/html.png",
                 "/icons/css.png",
@@ -169,6 +183,7 @@ const Projects = () => {
             image: '/projects/cardMemory.png',
             link: "https://danielfreeman068.github.io/Card-Memory/",
             isLive: true,
+            github: "https://github.com/DanielFreeman068/Card-Memory.git",
             icons: [
                 "/icons/html.png",
                 "/icons/css.png",
@@ -182,6 +197,7 @@ const Projects = () => {
             image: '/projects/maze.png',
             link: "https://danielfreeman068.github.io/jquery_maze_game/",
             isLive: true,
+            github: "https://github.com/DanielFreeman068/jquery_maze_game.git",
             icons: [
                 "/icons/html.png",
                 "/icons/css.png",
@@ -195,6 +211,7 @@ const Projects = () => {
             image: '/projects/calc.png',
             link: "https://danielfreeman068.github.io/calculator/",
             isLive: true,
+            github: "https://github.com/DanielFreeman068/calculator.git",
             icons: [
                 "/icons/html.png",
                 "/icons/css.png",
@@ -224,7 +241,7 @@ const Projects = () => {
                                 variants={itemVariants}
                                 whileHover={{ scale: 1.2 }}
                                 transition={{ type: 'spring', stiffness: 300 }}
-                                onClick={() => setSelectedProject(project)}
+                                onClick={() => {setSelectedProject(project), openModal()}}
                                 className="px-6 py-2 bg-accentDark border-2 border-white rounded-full">
                                 View Project
                             </motion.button>
@@ -243,10 +260,10 @@ const Projects = () => {
                             className="bg-soft bg-opacity-70 border-2 border-color-textMuted rounded-xl shadow-lg mt-12 w-full max-w-2xl p-8 relative"
                         >
                             {/* exit button */}
-                            <button onClick={() => setSelectedProject(null)} className="absolute top-0 right-2 text-white hover:text-red-500 text-4xl font-bold">×</button>
+                            <button onClick={() => {setSelectedProject(null), closeModal()}} className="absolute top-0 right-2 text-white hover:text-red-500 text-4xl font-bold">×</button>
 
                             {/* image */}
-                            <Image src={selectedProject.image} alt={selectedProject.label} width={600} height={300} className="rounded-lg mb-4 object-cover w-full h-60"/>
+                            <Image src={selectedProject.image} alt={selectedProject.label} width={600} height={300} className="rounded-lg mb-4 object-cover w-full h-72"/>
 
                             {/* title and description */}
                             <h2 className="text-2xl font-semibold mb-2 text-center">{selectedProject.label}</h2>
@@ -273,6 +290,23 @@ const Projects = () => {
                             </motion.div>
 
                             {/* view on github button */}
+                            {selectedProject.isLive && (
+                                <div className="text-center">
+                                    <motion.a
+                                        href={selectedProject.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        variants={itemVariants}
+                                        whileHover={{ scale: 1.1 }}
+                                        transition={{ type: 'spring', stiffness: 300 }}
+                                        className="inline-block text-sm sm:text-base mb-6 text-links"
+                                    >
+                                        Github Link
+                                    </motion.a>
+                                </div>
+                            )}
+
+                            {/* view on github or live site button */}
                             <div className="text-center">
                                 <motion.a
                                     href={selectedProject.link}

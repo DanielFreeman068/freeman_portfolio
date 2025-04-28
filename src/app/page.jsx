@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -97,7 +98,7 @@ const contacts = [
 
   return (
     <main className="min-h-screen text-textPrimary">
-      <Navigation />
+      <Navigation isModalOpen={isModalOpen} />
       
       <div className="relative pt-32 px-2">
         {/* About Section */}
@@ -225,7 +226,7 @@ const contacts = [
           <div className="relative z-0 flex flex-col items-center mt-20">
 
             {/* project cards */}
-            <Projects />
+            <Projects setIsModalOpen={setIsModalOpen} />
           </div>
 
         </section>
