@@ -179,6 +179,50 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 10,
             label: 'Jolt Mobile App',
+            desc: 'Placing in the top 10 for FBLA State, Jolt is a mobile application designed on Cordova Android with a purpose of gamifying learning for boring school subjects. For backend this appliation relies on NodeJS for backend routes and controllers all leading to a Mongodb Database. As for the frontend, HTHML5 and CSS were used for the structure and appeal to the user and JavaScript for our games and their functionalities.',
+            image: '/projects/joltMobile.png',
+            link: "https://github.com/DanielFreeman068/fbla-mad-cordova-nationals.git",
+            isLive: false,
+            icons: [
+                "/icons/html.png",
+                "/icons/css.png",
+                "/icons/js.png",
+                "/icons/node-js.png",
+                "/icons/mongodb.png",
+            ]
+        },
+        {
+            id: 11,
+            label: 'Transposition Cipher',
+            desc: 'This Transposition Cipher was my first full stack React project. Using an arcade like username signup process, each user is allowed to see how far they can get with each level unlocking another getting more difficult as it continues.',
+            image: '/projects/cipher.png',
+            link: "https://github.com/DanielFreeman068/react_transposition.git",
+            isLive: false,
+            icons: [
+                "/icons/react.png",
+                "/icons/css.png",
+                "/icons/node-js.png",
+                "/icons/mongodb.png",
+            ]
+        },
+        {
+            id: 12,
+            label: 'Jolt Mobile App',
+            desc: 'WRITE DESCRIPTION',
+            image: '/projects/joltMobile.png',
+            link: "https://github.com/DanielFreeman068/fbla-mad-cordova-nationals.git",
+            isLive: false,
+            icons: [
+                "/icons/html.png",
+                "/icons/css.png",
+                "/icons/js.png",
+                "/icons/node-js.png",
+                "/icons/mongodb.png",
+            ]
+        },
+        {
+            id: 13,
+            label: 'Jolt Mobile App',
             desc: 'WRITE DESCRIPTION',
             image: '/projects/joltMobile.png',
             link: "https://github.com/DanielFreeman068/fbla-mad-cordova-nationals.git",
