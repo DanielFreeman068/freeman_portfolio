@@ -184,7 +184,7 @@ const cards = [
                 </div>
 
                 {/* dots */}
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
                     {cards.map((_, idx) => (
                         <span
                             key={idx}
