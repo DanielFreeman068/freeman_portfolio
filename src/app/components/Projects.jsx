@@ -154,7 +154,7 @@ const Projects = ({ setIsModalOpen }) => {
             label: 'My Portfolio (This Portfolio)',
             desc: 'A personal portfolio showcasing projects, skills, and background. Built with React and Tailwind CSS, featuring a contact form, project gallery, and detailed work/education history.',
             image: '/projects/freemanPortfolio.png',
-            link: "replaceWithLiveLinkLater",
+            link: "https://freemanportfolio.netlify.app/",
             isLive: true,
             github: "https://github.com/DanielFreeman068/freeman_portfolio.git",
             icons: [
