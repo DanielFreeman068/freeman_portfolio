@@ -58,7 +58,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 1,
             label: 'Pet Adoption Platform',
-            desc: 'A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption. For admin usage there is functionality to delete and edit pets and people signed up.',
+            desc: 'A full-stack pet adoption web application using EJS, Node.js, and MongoDB. Users can search and filter for pets, while registered users can surrender pets for adoption. Admin users have access to manage both pet and user listings through features like edit and delete.',
             image: '/projects/petAdoption.png',
             link: "https://pet-adoption-platform-y46p.onrender.com",
             isLive: true,
@@ -73,7 +73,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 2,
             label: 'Event Registration',
-            desc: 'A full stack event registration platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers browse and sign up for events. For admin usage there is functionality to delete and edit events as well.',
+            desc: 'A full-stack event registration system built with EJS, Node.js, and MongoDB. Visitors can browse and sign up for events. Admins can create, update, or delete event listings with a user-friendly interface.',
             image: '/projects/eventRegistrationImage.png',
             link: "https://github.com/DanielFreeman068/EJS--Event-Registration.git",
             isLive: false,
@@ -87,7 +87,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 3,
             label: 'Boy Scout 747',
-            desc: 'A full-stack web app for Boy Scout Troop 747, built with React, Tailwind, Node.js, and MongoDB, serving as a digital hub with troop info, event calendar, photo gallery, online forms, and an admin dashboard.',
+            desc: 'A troop website for Boy Scout Troop 747 built with React, Tailwind CSS, Node.js, and MongoDB. It includes a photo gallery, event calendar, forms, and a robust admin panel for content and user management.',
             image: '/projects/boyScout.png',
             link: "https://troop747.onrender.com/",
             isLive: true,
@@ -102,7 +102,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 4,
             label: 'My API',
-            desc: 'A custom API project I coded to form a better understanding in RESTUL API that provides JSON data of 50 musical artists, including instructions on how to retrieve said data.',
+            desc: 'A custom-built RESTful API project providing JSON data on 50 musical artists. Designed to enhance understanding of backend API development using Node.js and EJS, with clear instructions for accessing data.',
             image: '/projects/api.png',
             link: "https://github.com/DanielFreeman068/myAPI.git",
             isLive: false,
@@ -115,7 +115,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 5,
             label: 'React Blog Page',
-            desc: 'This is a blog that uses React to format and deliver a variety of information on trending news for various topics.',
+            desc: 'A React-based blog platform showcasing articles on trending topics. Demonstrates dynamic rendering of posts, reusable components, and clean user interface design.',
             image: '/projects/blog.png',
             link: "https://github.com/DanielFreeman068/myAPI.git",
             isLive: false,
@@ -127,7 +127,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 6,
             label: 'Card Game API',
-            desc: 'This project uses EJS, CSS and the deckofcardsAPI for users to play games of either Blackjack or War.',
+            desc: 'A card game platform using the Deck of Cards API, EJS, and CSS. Features implementations of Blackjack and War, with visually appealing card animations and game mechanics.',
             image: '/projects/blackjackImage.png',
             link: "https://github.com/DanielFreeman068/Cards-API.git",
             isLive: false,
@@ -139,7 +139,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 7,
             label: 'Quizzy Bee',
-            desc: 'Quizzy Bee is a fully responsive quiz app created in React that tests users on the beautiful sport of Soccer.',
+            desc: 'A responsive quiz application built in React that tests users on soccer trivia. Includes scoring, navigation between questions, and responsive feedback.',
             image: '/projects/reactQuizImage.png',
             link: "https://quizzy-bee.netlify.app/",
             isLive: true,
@@ -152,7 +152,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 8,
             label: 'My Portfolio (This Portfolio)',
-            desc: 'A portfolio displaying all of my knowledge learned and project completed from West-MEC, my experience in the work force and education, and an about me section containing a contact form.',
+            desc: 'A personal portfolio showcasing projects, skills, and background. Built with React and Tailwind CSS, featuring a contact form, project gallery, and detailed work/education history.',
             image: '/projects/freemanPortfolio.png',
             link: "replaceWithLiveLinkLater",
             isLive: true,
@@ -165,7 +165,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 9,
             label: 'Cash Compass (Financial Tracker)',
-            desc: 'Taking 5th Place at FBLA State and qualifying for Nationals, Cash Compass is a financial tracker built for students to input transactions and track their finances through many forms of data charts and budgeting assistance. This project relies on Mongodb and NodeJS for backend with React and Tailwind delivering well formatted and responsively designed data to the user.',
+            desc: 'An award-winning financial tracking application built with React, Tailwind, Node.js, and MongoDB. Enables students to manage budgets, input transactions, and analyze spending through dynamic charts. Placed 5th at FBLA State and qualified for Nationals.',
             image: '/projects/cashCompass.png',
             link: "https://github.com/DanielFreeman068/fbla_cash_compass.git",
             isLive: false,
@@ -179,7 +179,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 10,
             label: 'Jolt Mobile App',
-            desc: 'Placing in the top 10 for FBLA State, Jolt is a mobile application designed on Cordova Android with a purpose of gamifying learning for boring school subjects. For backend this appliation relies on NodeJS for backend routes and controllers all leading to a Mongodb Database. As for the frontend, HTHML5 and CSS were used for the structure and appeal to the user and JavaScript for our games and their functionalities.',
+            desc: 'A gamified learning mobile app developed with Cordova for Android. Uses Node.js and MongoDB for backend with HTML5, CSS, and JavaScript powering the front end and game logic. Earned top 10 placement at FBLA State.',
             image: '/projects/joltMobile.png',
             link: "https://github.com/DanielFreeman068/fbla-mad-cordova-nationals.git",
             isLive: false,
@@ -194,7 +194,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 11,
             label: 'Transposition Cipher',
-            desc: 'This Transposition Cipher was my first full stack React project. Using an arcade like username signup process, each user is allowed to see how far they can get with each level unlocking another getting more difficult as it continues.',
+            desc: 'A React-based game where users decode transposition ciphers across increasing difficulty levels. Features a user login system and level progression. First full-stack React project demonstrating backend integration with MongoDB.',
             image: '/projects/cipher.png',
             link: "https://github.com/DanielFreeman068/react_transposition.git",
             isLive: false,
@@ -207,38 +207,32 @@ const Projects = ({ setIsModalOpen }) => {
         },
         {
             id: 12,
-            label: 'Jolt Mobile App',
-            desc: 'WRITE DESCRIPTION',
-            image: '/projects/joltMobile.png',
-            link: "https://github.com/DanielFreeman068/fbla-mad-cordova-nationals.git",
+            label: 'NextJS Portfolio Project',
+            desc: 'A modern remake of an earlier HTML/CSS portfolio using Next.js and Tailwind CSS. This project served as practice in learning server-side rendering and file-based routing.',
+            image: '/projects/nextPortfolio.png',
+            link: "https://github.com/DanielFreeman068/next_portfolio.git",
             isLive: false,
             icons: [
-                "/icons/html.png",
-                "/icons/css.png",
-                "/icons/js.png",
-                "/icons/node-js.png",
-                "/icons/mongodb.png",
+                "/icons/tailwind.svg",
+                "/icons/next.png",
             ]
         },
         {
             id: 13,
-            label: 'Jolt Mobile App',
-            desc: 'WRITE DESCRIPTION',
-            image: '/projects/joltMobile.png',
-            link: "https://github.com/DanielFreeman068/fbla-mad-cordova-nationals.git",
+            label: 'Pokemon Data Fetcher',
+            desc: 'A Next.js project for practicing data fetching with both static site generation (SSG) and server-side rendering (SSR). Pulls and displays data from the Pokémon API in a clean, structured layout.',
+            image: '/projects/pokemon.png',
+            link: "https://github.com/DanielFreeman068/next_data_fetching.git",
             isLive: false,
             icons: [
-                "/icons/html.png",
-                "/icons/css.png",
-                "/icons/js.png",
-                "/icons/node-js.png",
-                "/icons/mongodb.png",
+                "/icons/tailwind.svg",
+                "/icons/next.png",
             ]
         },
         {
             id: 14,
             label: 'Tic Tac Toe',
-            desc: 'This game of Tic Tac Toe utilizes HTML5, CSS, and JavaScript to allow for either a 1 or 2 player round.',
+            desc: 'A web-based implementation of the classic Tic Tac Toe game using HTML5, CSS, and JavaScript. Features both one-player and two-player modes with basic win logic and game reset.',
             image: '/projects/ttt.png',
             link: "https://danielfreeman068.github.io/TicTacToe/",
             isLive: true,
@@ -252,7 +246,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 15,
             label: 'Card Memory Game',
-            desc: 'This card memory game utilizes card flipping features, a timer, and a reset option displaying knowledge in HTML5, CSS and JavaScript.',
+            desc: 'A memory card matching game built with HTML5, CSS, and JavaScript. Includes card flip animation, a timer, and a reset feature to test short-term memory and logic.',
             image: '/projects/cardMemory.png',
             link: "https://danielfreeman068.github.io/Card-Memory/",
             isLive: true,
@@ -266,7 +260,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 16,
             label: 'JQuery Maze Game',
-            desc: 'This Minecraft themed maze game offers three difficulty levels of mazes utilizing languages such as HTML5, CSS and JavaScript.',
+            desc: 'A Minecraft-themed maze game using HTML5, CSS, JavaScript, and jQuery. Offers three difficulty levels and visually interactive pathfinding through dynamically styled mazes.',
             image: '/projects/maze.png',
             link: "https://danielfreeman068.github.io/jquery_maze_game/",
             isLive: true,
@@ -280,7 +274,7 @@ const Projects = ({ setIsModalOpen }) => {
         {
             id: 17,
             label: 'Calculator',
-            desc: 'This calculator was one of my first projects as a coder. It utilizes three languages: HTML5, CSS and JavaScript',
+            desc: 'A basic calculator created using HTML5, CSS, and JavaScript. One of the first projects built to understand DOM manipulation and user input processing.',
             image: '/projects/calc.png',
             link: "https://danielfreeman068.github.io/calculator/",
             isLive: true,
@@ -291,7 +285,7 @@ const Projects = ({ setIsModalOpen }) => {
                 "/icons/js.png",
             ]
         },
-    ];
+    ];    
 
     const showMore = () => {
         setVisibleCount((prev) => Math.min(prev + 3, projects.length));
