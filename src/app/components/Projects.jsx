@@ -218,8 +218,9 @@ const Projects = ({ setIsModalOpen }) => {
             label: 'Transposition Cipher',
             desc: 'A React-based game where users decode transposition ciphers across increasing difficulty levels. Features a user login system and level progression. First full-stack React project demonstrating backend integration with MongoDB.',
             image: '/projects/cipher.png',
-            link: "https://github.com/DanielFreeman068/react_transposition.git",
-            isLive: false,
+            link: "https://react-transposition.onrender.com/",
+            isLive: true,
+            github: "https://github.com/DanielFreeman068/react_transposition.git",
             icons: [
                 "/icons/react.png",
                 "/icons/css.png",
