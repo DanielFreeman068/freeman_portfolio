@@ -231,8 +231,9 @@ const Projects = ({ setIsModalOpen }) => {
             label: 'NextJS Portfolio Project',
             desc: 'A modern remake of an earlier HTML/CSS portfolio using Next.js and Tailwind CSS. This project served as practice in learning server-side rendering and file-based routing.',
             image: '/projects/nextPortfolio.png',
-            link: "https://github.com/DanielFreeman068/next_portfolio.git",
-            isLive: false,
+            link: "https://dfreem-portfolio.netlify.app/projects",
+            isLive: true,
+            github: 'https://github.com/DanielFreeman068/next_portfolio.git',
             icons: [
                 "/icons/tailwind.svg",
                 "/icons/next.png",
@@ -309,7 +310,7 @@ const Projects = ({ setIsModalOpen }) => {
     ];    
 
     const showMore = () => {
-        setVisibleCount((prev) => Math.min(prev + projectsPerRow, projects.length));
+        setVisibleCount((prev) => Math.min(prev + (projectsPerRow * 2), projects.length));
     };
 
     const showLess = () => {
