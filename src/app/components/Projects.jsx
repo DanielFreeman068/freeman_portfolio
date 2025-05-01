@@ -125,8 +125,9 @@ const Projects = ({ setIsModalOpen }) => {
             label: 'My API',
             desc: 'A custom-built RESTful API project providing JSON data on 50 musical artists. Designed to enhance understanding of backend API development using Node.js and EJS, with clear instructions for accessing data.',
             image: '/projects/api.png',
-            link: "https://github.com/DanielFreeman068/myAPI.git",
-            isLive: false,
+            link: "https://myapi-8314.onrender.com/api",
+            isLive: true,
+            github: "https://github.com/DanielFreeman068/myAPI.git",
             icons: [
                 "/icons/ejs.png",
                 "/icons/css.png",
