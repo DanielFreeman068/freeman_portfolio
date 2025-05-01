@@ -1,11 +1,32 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const Projects = ({ setIsModalOpen }) => {
     const [selectedProject, setSelectedProject] = useState(null);
-    const [visibleCount, setVisibleCount] = useState(6);
+    const [projectsPerRow, setProjectsPerRow] = useState(4);
+    const containerRef = useRef(null);
+    const [visibleCount, setVisibleCount] = useState(projectsPerRow);
+
+    //use effect to check how many projects fit across the current screen size
+    useEffect(() => {
+        const calculateProjectsPerRow = () => {
+            if (!containerRef.current) return;
+
+            const containerWidth = containerRef.current.offsetWidth - 140;
+            const cardWidth = 330 + 64 ;
+
+            const count = Math.floor(containerWidth / cardWidth);
+            setProjectsPerRow(count > 0 ? count : 1);
+            setVisibleCount(count > 0 ? count * 2 : 1);
+        };
+
+        calculateProjectsPerRow();
+        window.addEventListener('resize', calculateProjectsPerRow);
+        return () => window.removeEventListener('resize', calculateProjectsPerRow);
+    }, []);
+
 
     //functions for modal use state control
     const openModal = () => {
@@ -288,16 +309,16 @@ const Projects = ({ setIsModalOpen }) => {
     ];    
 
     const showMore = () => {
-        setVisibleCount((prev) => Math.min(prev + 3, projects.length));
+        setVisibleCount((prev) => Math.min(prev + projectsPerRow, projects.length));
     };
 
     const showLess = () => {
-        setVisibleCount(6);
+        setVisibleCount(projectsPerRow * 2);
     };
 
     return (
         <div>
-            <div className="flex flex-wrap justify-center gap-16 mx-8 relative z-10">
+            <div ref={containerRef} className="flex flex-wrap justify-center gap-16 mx-8 relative z-10">
                 {projects.slice(0, visibleCount).map((project) => (
                     <motion.div data-aos="fade-up" key={project.id} className="relative w-[330px] md:w-[400px] h-[300px] border-2 border-color-textMuted rounded-xl overflow-hidden shadow-lg group cursor-pointer" whileHover={{ scale: 1.05 }} transition={{ duration: 0.1 }} style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                         <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out backdrop-blur-sm rounded-xl" />
