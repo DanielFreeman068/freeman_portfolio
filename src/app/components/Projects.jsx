@@ -95,7 +95,7 @@ const Projects = ({ setIsModalOpen }) => {
             id: 2,
             label: 'Event Registration',
             desc: 'A full-stack event registration system built with EJS, Node.js, and MongoDB. Visitors can browse and sign up for events. Admins can create, update, or delete event listings with a user-friendly interface.',
-            image: '/projects/eventRegistrationImage.png',
+            image: '/projects/eventRegistration.png',
             link: "https://github.com/DanielFreeman068/EJS--Event-Registration.git",
             isLive: false,
             icons: [
