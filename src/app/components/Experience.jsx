@@ -20,75 +20,81 @@ const Experience = () => {
     // Certifications Data
     const certifications = [
         {
-        id: 1,
-        label: 'IT Specialist - HTML5 Application Development',
-        date: 'May 20, 2024',
-        icon: '/certification_icons/HTML5.png',
+            id: 1,
+            label: 'IT Specialist - HTML5 Application Development',
+            date: 'May 20, 2024',
+            icon: '/certification_icons/HTML5.png',
         },
         {
-        id: 2,
-        label: 'PCEP - Certified Entry-Level Python Programmer',
-        date: 'April 10, 2025',
-        icon: '/certification_icons/pcep.png',
+            id: 2,
+            label: 'PCEP - Certified Entry-Level Python Programmer',
+            date: 'April 10, 2025',
+            icon: '/certification_icons/pcep.png',
         },
+        {
+            id: 3,
+            label: 'IT Specialist - JavaScript',
+            date: 'May 7, 2025',
+            icon: '/certification_icons/js.png',
+        }
     ];
 
     // Job Data
     const jobData = [
         {
-        type: "Education",
-        title: "Highschool",
-        company: "Freeman Academy",
-        time: "2021 - 2025",
-        details: [
-            "Completed 28 Credits",
-            "4.0 GPA",
-            "Team Captain - Soccer",
-            "Perfect Attendance",
-        ],
-        icon: "📚",
-        iconBg: "bg-green-600",
+            type: "Education",
+            title: "Highschool",
+            company: "Freeman Academy",
+            time: "2021 - 2025",
+            details: [
+                "Completed 28 Credits",
+                "4.0 GPA",
+                "Team Captain - Soccer",
+                "Perfect Attendance",
+            ],
+            icon: "📚",
+            iconBg: "bg-green-600",
         },
         {
-        type: "Education",
-        title: "Technical Institute",
-        company: "West-MEC",
-        time: "2023 - 2025",
-        details: [
-            "Website Coding and Development",
-            "A+ Student",
-            "HTML, CSS, Python, JavaScript, MongoDB, Node.js, React, Tailwind, Next.js, Typescript, EJS "
-        ],
-        icon: "💻",
-        iconBg: "bg-blue-500",
+            type: "Education",
+            title: "Technical Institute",
+            company: "West-MEC",
+            time: "2023 - 2025",
+            details: [
+                "Website Coding and Development",
+                "A+ Student",
+                "HTML, CSS, Python, JavaScript, MongoDB, Node.js, React, Tailwind, Next.js, Typescript, EJS "
+            ],
+            icon: "💻",
+            iconBg: "bg-blue-500",
         },
         {
-        type: "Job Experience",
-        title: "General Manager",
-        company: "Subway",
-        time: "2022 - 2025",
-        details: [
-            "Managed store operations and resolved issues",
-            "Created schedules, tracked inventory, and handled ordering and vendor coordination",
-            "Oversaw hiring and training",
-            "Supervised team productivity"
-        ],
-        icon: "🥪",
-        iconBg: "bg-yellow-400",
+            type: "Job Experience",
+            title: "General Manager",
+            company: "Subway",
+            time: "2022 - 2025",
+            details: [
+                "Managed store operations and resolved issues",
+                "Created schedules, tracked inventory, and handled ordering and vendor coordination",
+                "Oversaw hiring and training",
+                "Supervised team productivity"
+            ],
+            icon: "🥪",
+            iconBg: "bg-yellow-400",
         },
         {
-        type: "Job Experience",
-        title: "Business Owner",
-        company: "Self Employed",
-        time: "2025 - Present",
-        details: [
-            "Developing Websites for other companies",
-            "Co-running social media account for Sun Cyclery",
-            "Fixed and sold bikes as bike mechanic",
-            "Managing the online marketing of bike products",
-        ],
-        icon: "🚴‍♂️",
-        iconBg: "bg-blue-400",
+            type: "Job Experience",
+            title: "Business Owner",
+            company: "Self Employed",
+            time: "2025 - Present",
+            details: [
+                "Developing Websites for other companies",
+                "Co-running social media account for Sun Cyclery",
+                "Fixed and sold bikes as bike mechanic",
+                "Managing the online marketing of bike products",
+            ],
+            icon: "🚴‍♂️",
+            iconBg: "bg-blue-400",
         },
     ];
 
