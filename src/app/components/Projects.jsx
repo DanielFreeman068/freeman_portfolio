@@ -148,6 +148,22 @@ const Projects = ({ setIsModalOpen }) => {
         },
         {
             id: 6,
+            label: 'The Saucy Chef',
+            desc: 'The Saucy Chef is a full-stack recipe and meal planning app where users can sign up, log in, recover passwords, browse and favorite recipes, create their own, build weekly meal plans, and download shopping lists as Excel files. It includes an admin panel to manage users and recipes. Built with Next.js, Node.js, MongoDB, Tailwind CSS, and ExcelJS.',
+            image: '/projects/saucy.png',
+            link: "https://saucy-chef.onrender.com/",
+            isLive: true,
+            github: "https://github.com/DanielFreeman068/saucy_chef.git",
+            icons: [
+                "/icons/next.png",
+                "/icons/tailwind.svg",
+                "/icons/node-js.png",
+                "/icons/mongodb.png",
+                "/icons/js.png",
+            ]
+        },
+        {
+            id: 7,
             label: 'Card Game API',
             desc: 'A card game platform using the Deck of Cards API, EJS, and CSS. Features implementations of Blackjack and War, with visually appealing card animations and game mechanics.',
             image: '/projects/blackjackImage.png',
@@ -159,7 +175,7 @@ const Projects = ({ setIsModalOpen }) => {
             ]
         },
         {
-            id: 7,
+            id: 8,
             label: 'Quizzy Bee',
             desc: 'A responsive quiz application built in React that tests users on soccer trivia. Includes scoring, navigation between questions, and responsive feedback.',
             image: '/projects/reactQuizImage.png',
@@ -172,7 +188,7 @@ const Projects = ({ setIsModalOpen }) => {
             ]
         },
         {
-            id: 8,
+            id: 9,
             label: 'My Portfolio (This Portfolio)',
             desc: 'A personal portfolio showcasing projects, skills, and background. Built with React and Tailwind CSS, featuring a contact form, project gallery, and detailed work/education history.',
             image: '/projects/freemanPortfolio.png',
@@ -185,7 +201,7 @@ const Projects = ({ setIsModalOpen }) => {
             ]
         },
         {
-            id: 9,
+            id: 10,
             label: 'Cash Compass (Financial Tracker)',
             desc: 'An award-winning financial tracking application built with React, Tailwind, Node.js, and MongoDB. Enables students to manage budgets, input transactions, and analyze spending through dynamic charts. Placed 5th at FBLA State and qualified for Nationals.',
             image: '/projects/cashCompass.png',
@@ -199,7 +215,7 @@ const Projects = ({ setIsModalOpen }) => {
             ]
         },
         {
-            id: 10,
+            id: 11,
             label: 'Jolt Mobile App',
             desc: 'A gamified learning mobile app developed with Cordova for Android. Uses Node.js and MongoDB for backend with HTML5, CSS, and JavaScript powering the front end and game logic. Earned top 10 placement at FBLA State.',
             image: '/projects/joltMobile.png',
@@ -214,7 +230,7 @@ const Projects = ({ setIsModalOpen }) => {
             ]
         },
         {
-            id: 11,
+            id: 12,
             label: 'Transposition Cipher',
             desc: 'A React-based game where users decode transposition ciphers across increasing difficulty levels. Features a user login system and level progression. First full-stack React project demonstrating backend integration with MongoDB.',
             image: '/projects/cipher.png',
@@ -229,7 +245,7 @@ const Projects = ({ setIsModalOpen }) => {
             ]
         },
         {
-            id: 12,
+            id: 13,
             label: 'NextJS Portfolio Project',
             desc: 'A modern remake of an earlier HTML/CSS portfolio using Next.js and Tailwind CSS. This project served as practice in learning server-side rendering and file-based routing.',
             image: '/projects/nextPortfolio.png',
@@ -242,7 +258,7 @@ const Projects = ({ setIsModalOpen }) => {
             ]
         },
         {
-            id: 13,
+            id: 14,
             label: 'Pokemon Data Fetcher',
             desc: 'A Next.js project for practicing data fetching with both static site generation (SSG) and server-side rendering (SSR). Pulls and displays data from the Pokémon API in a clean, structured layout.',
             image: '/projects/pokemon.png',
@@ -254,7 +270,7 @@ const Projects = ({ setIsModalOpen }) => {
             ]
         },
         {
-            id: 14,
+            id: 15,
             label: 'Tic Tac Toe',
             desc: 'A web-based implementation of the classic Tic Tac Toe game using HTML5, CSS, and JavaScript. Features both one-player and two-player modes with basic win logic and game reset.',
             image: '/projects/ttt.png',
@@ -268,7 +284,7 @@ const Projects = ({ setIsModalOpen }) => {
             ]
         },
         {
-            id: 15,
+            id: 16,
             label: 'Card Memory Game',
             desc: 'A memory card matching game built with HTML5, CSS, and JavaScript. Includes card flip animation, a timer, and a reset feature to test short-term memory and logic.',
             image: '/projects/cardMemory.png',
@@ -282,7 +298,7 @@ const Projects = ({ setIsModalOpen }) => {
             ]
         },
         {
-            id: 16,
+            id: 17,
             label: 'JQuery Maze Game',
             desc: 'A Minecraft-themed maze game using HTML5, CSS, JavaScript, and jQuery. Offers three difficulty levels and visually interactive pathfinding through dynamically styled mazes.',
             image: '/projects/maze.png',
@@ -296,7 +312,7 @@ const Projects = ({ setIsModalOpen }) => {
             ]
         },
         {
-            id: 17,
+            id: 18,
             label: 'Calculator',
             desc: 'A basic calculator created using HTML5, CSS, and JavaScript. One of the first projects built to understand DOM manipulation and user input processing.',
             image: '/projects/calc.png',

@@ -27,13 +27,19 @@ const Experience = () => {
         },
         {
             id: 2,
-            label: 'PCEP - Certified Entry-Level Python Programmer',
-            date: 'April 10, 2025',
-            icon: '/certification_icons/pcep.png',
+            label: '[PCEP-30-02] PCEP™ - Certified Entry-Level Python Programmer',
+            date: 'May 29, 2025',
+            icon: '/certification_icons/pcap.png',
         },
         {
             id: 3,
             label: 'IT Specialist - JavaScript',
+            date: 'May 7, 2025',
+            icon: '/certification_icons/js.png',
+        },
+        {
+            id: 4,
+            label: '[PCAP-31-03] PCAP™ - Certified Associate Python Programmer',
             date: 'May 7, 2025',
             icon: '/certification_icons/js.png',
         }
@@ -166,7 +172,7 @@ const Experience = () => {
                 <h3 className="text-2xl font-semibold mb-10">Certifications</h3>
                 <div className="flex flex-wrap gap-6 justify-center">
                 {certifications.map(cert => (
-                    <div data-aos="fade-up" key={cert.id} className="max-w-[300px]  bg-soft bg-opacity-80 rounded-xl p-8 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md flex flex-col items-center">
+                    <div data-aos="fade-up" key={cert.id} className="w-[320px]  bg-soft bg-opacity-80 rounded-xl p-8 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md flex flex-col items-center">
                         <Image src={cert.icon} alt={cert.label} width={75} height={75} className="rounded-full mb-4" />
                         <span className="text-lg font-semibold text-center">{cert.label}</span>
                         <span>{cert.date}</span>
