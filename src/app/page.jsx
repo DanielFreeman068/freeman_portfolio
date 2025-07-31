@@ -100,21 +100,21 @@ const contacts = [
     <main className="min-h-screen text-textPrimary">
       <Navigation isModalOpen={isModalOpen} />
       
-      <div className="relative pt-32 px-2">
+      <div className="relative pt-32">
         {/* About Section */}
-        <section id="about" className="min-h-screen px-8 py-14 flex flex-col text-center mx-auto">
+        <section id="about" className="min-h-screen px-4 sm:px-8 py-14 flex flex-col text-center mx-auto">
           <h2 className="mb-[50px] text-3xl w-fit mx-auto font-bold relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-all after:duration-300 hover:after:w-0">
             About Me
           </h2>
 
           <div className="flex flex-col xl:flex-row gap-10 mx-auto">
-            <div className="flex gap-10 flex-col lg:flex-row mx-auto">
+            <div className="flex gap-10 flex-col lg:flex-row mx-auto px-2">
 
               {/* profile picture */}
               <div data-aos="fade-down" className="block lg:hidden rounded-xl border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md bg-[url('/profile_two.jpg')] bg-cover bg-no-repeat bg-center mx-auto w-full h-[350px]"></div>
 
               {/* about me info */}
-              <div data-aos="fade-right" className="flex flex-col space-y-8  bg-soft bg-opacity-80 rounded-xl p-8 lg:p-16 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
+              <div data-aos="fade-right" className="flex flex-col space-y-8 bg-soft bg-opacity-80 rounded-xl py-8 px-4 sm:px-8 lg:p-16 border-2 border-color-textMuted hover:shadow-textMuted duration-100 transition-shadow hover:shadow-md">
                 
                 {/* name */}
                   <h1 className="text-xl md:text-3xl font-medium">Daniel Freeman</h1>
@@ -217,7 +217,7 @@ const contacts = [
         </section>
         
         {/* Projects Section */}
-        <section id="projects" className="min-h-screen py-16 flex flex-col text-center mx-auto">
+        <section id="projects" className="min-h-screen py-16 px-8 flex flex-col text-center mx-auto">
           <h2 className="mb-16 text-3xl w-fit mx-auto font-bold relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-all after:duration-300 hover:after:w-0">
             Projects
           </h2>

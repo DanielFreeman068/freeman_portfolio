@@ -123,7 +123,7 @@ const Experience = () => {
 
 
         {/* Card Information */}
-        <div className="relative left-2 bg-textPrimary h-[410px] max-w-[260px] rounded-lg p-2 shadow-md transition-all duration-500 group-hover:translate-x-12 space-y-2">
+        <div className="relative left-2 bg-textPrimary h-[410px] max-w-[260px] rounded-lg p-2 shadow-md transition-all duration-500 group-hover:translate-x-9 space-y-2">
             <h4 className="text-xl font-bold text-center text-primary my-6">{job.title}</h4>
             <h3 className="text-lg font-semibold text-center text-gray-700">
                 {job.company} / {job.time}

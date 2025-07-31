@@ -129,10 +129,10 @@ const cards = [
         <div data-aos="fade-up" className="flex flex-col items-center">
             <div className="relative w-full lg:w-[300px] h-[465px] sm:h-[300px] lg:min-h-[530px] shadow-lg rounded-xl">
                 {/* Arrows */}
-                <div className="absolute top-1/2 -left-5 -translate-y-1/2 z-10">
+                <div className="absolute top-1/2 -left-3 -translate-y-1/2 z-10">
                     <ChevronLeft onClick={prevCard} className='text-primary bg-white rounded-full shadow-md h-[35px] w-[35px] duration-100 transition-shadow hover:shadow-textMuted hover:shadow-md hover:cursor-pointer' />
                 </div>
-                <div className="absolute top-1/2 -right-5 -translate-y-1/2 z-10">
+                <div className="absolute top-1/2 -right-3 -translate-y-1/2 z-10">
                     <ChevronRight onClick={nextCard} className='text-primary bg-white rounded-full shadow-md h-[35px] w-[35px] duration-100 transition-shadow hover:shadow-textMuted hover:shadow-md hover:cursor-pointer' />
                 </div>
 
