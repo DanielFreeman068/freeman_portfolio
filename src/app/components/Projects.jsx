@@ -337,7 +337,7 @@ const Projects = ({ setIsModalOpen }) => {
 
     return (
         <div className='w-full'>
-            <div ref={containerRef} className="flex flex-wrap justify-center gap-8 mx-2 sm:mx-4 relative z-10">
+            <div ref={containerRef} className="flex flex-wrap justify-center gap-8 relative z-10">
                 {projects.slice(0, visibleCount).map((project) => (
                     <motion.div data-aos="fade-up" key={project.id} className="relative w-[330px] md:w-[400px] h-[300px] border-2 border-color-textMuted rounded-xl overflow-hidden shadow-lg group cursor-pointer" whileHover={{ scale: 1.05 }} transition={{ duration: 0.1 }} style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                         <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out backdrop-blur-sm rounded-xl" />
